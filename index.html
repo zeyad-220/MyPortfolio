@@ -3,32 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="Zeyad Gaber" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-        </script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "bVz_AOZpAbCR2gADo",
-      });
-   })();
-        </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "bVz_AOZpAbCR2gADo",
+            });
+        })();
+    </script>
     <title>Zeyad's Portfolio</title>
 </head>
 
 <body>
 
     <header>
-
-        <img src="logo.png" alt="logo" class="logo">
+        <img id="logo" src="logo-dark.png" alt="logo" class="logo">
         <div class="hamburger">
             <i class="fas fa-bars"></i>
         </div>
-
         <nav>
             <a href="#home" class="active">Home</a>
             <a href="#skills">Skills</a>
@@ -36,227 +32,225 @@
             <a href="#certificates">Certificates</a>
             <a href="#contact">Contact Me</a>
         </nav>
-        
     </header>
 
-
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
 
     <section class="home">
         <div class="home-img">
-            <img src="profile.jpg" alt="Zeyad">
+            <img id="profile" src="profile-dark.jpg" alt="Zeyad">
         </div>
         <div class="home-content">
-            <h1>Hi, Iam <span>Zeyad</span></h1>
+            <h1>Hi, I'm <span>Zeyad</span></h1>
             <h3 class="typing-text">I'm a <span id="typing"></span></h3>
-
             <ul>
                 <li><p id="aboutText">
                    <span> 𝐈’𝐦 𝐙𝐞𝐲𝐚𝐝 𝐆𝐚𝐛𝐞𝐫 𝐚 𝟐𝟎 𝐲𝐞𝐚𝐫𝐬 𝐨𝐥𝐝 𝐜𝐨𝐦𝐩𝐮𝐭𝐞𝐫 𝐭𝐞𝐜𝐡𝐧𝐢𝐜𝐢𝐚𝐧 𝐚𝐧𝐝 𝐰𝐞𝐛 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐟𝐫𝐨𝐦 𝐄𝐠𝐲𝐩𝐭.
                     𝐈 𝐡𝐚𝐯𝐞 𝐚 𝐝𝐢𝐩𝐥𝐨𝐦𝐚 𝐢𝐧 𝐂𝐨𝐦𝐩𝐮𝐭𝐞𝐫 𝐒𝐜𝐢𝐞𝐧𝐜𝐞 𝐚𝐧𝐝 𝐈𝐚𝐦 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐩𝐮𝐫𝐬𝐮𝐢𝐧𝐠 𝐚 𝐛𝐚𝐜𝐡𝐞𝐥𝐨𝐫'𝐬 𝐝𝐞𝐠𝐫𝐞𝐞 𝐢𝐧 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐒𝐲𝐬𝐭𝐞𝐦𝐬.</li></span>
                     <span id="moreText" style="display: none;">
-                      <li>  𝐈 𝐡𝐚𝐯𝐞 𝐚 𝐝𝐞𝐞𝐩 𝐩𝐚𝐬𝐬𝐢𝐨𝐧 𝐟𝐨𝐫 𝐜𝐨𝐦𝐩𝐮𝐭𝐞𝐫𝐬 𝐚𝐧𝐝 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠 𝐜𝐨𝐧𝐬𝐭𝐚𝐧𝐭𝐥𝐲 𝐬𝐭𝐫𝐢𝐯𝐢𝐧𝐠 𝐭𝐨 𝐥𝐞𝐚𝐫𝐧, 𝐢𝐦𝐩𝐫𝐨𝐯𝐞, 𝐚𝐧𝐝 𝐛𝐮𝐢𝐥𝐝 𝐚 𝐛𝐞𝐭𝐭𝐞𝐫 𝐟𝐮𝐭𝐮𝐫𝐞.
-                        𝐈 𝐬𝐩𝐞𝐜𝐢𝐚𝐥𝐢𝐳𝐞 𝐢𝐧 𝐰𝐞𝐛 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭, 𝐜𝐫𝐞𝐚𝐭𝐢𝐧𝐠 𝐰𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐢𝐭𝐡 𝐝𝐞𝐝𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐞𝐧𝐭𝐡𝐮𝐬𝐢𝐚𝐬𝐦 𝐮𝐬𝐢𝐧𝐠 𝐇𝐓𝐌𝐋, 𝐂𝐒𝐒, 𝐚𝐧𝐝 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭. 
-                        𝐚𝐧𝐝 𝐂𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲, 𝐈 𝐚𝐦 𝐚𝐥𝐬𝐨 𝐓𝐫𝐲𝐢𝐧𝐠 𝐭𝐨 𝐟𝐨𝐜𝐮𝐬 𝐨𝐧 𝐥𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤𝐬 𝐭𝐨 𝐞𝐧𝐡𝐚𝐧𝐜𝐞 𝐰𝐞𝐛𝐬𝐢𝐭𝐞 𝐩𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞 𝐚𝐧𝐝 𝐮𝐬𝐞𝐫 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞.</li>
+                    <li>𝐈 𝐡𝐚𝐯𝐞 𝐚 𝐝𝐞𝐞𝐩 𝐩𝐚𝐬𝐬𝐢𝐨𝐧 𝐟𝐨𝐫 𝐜𝐨𝐦𝐩𝐮𝐭𝐞𝐫𝐬 𝐚𝐧𝐝 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠 𝐜𝐨𝐧𝐬𝐭𝐚𝐧𝐭𝐥𝐲 𝐬𝐭𝐫𝐢𝐯𝐢𝐧𝐠 𝐭𝐨 𝐥𝐞𝐚𝐫𝐧, 𝐢𝐦𝐩𝐫𝐨𝐯𝐞, 𝐚𝐧𝐝 𝐛𝐮𝐢𝐥𝐝 𝐚 𝐛𝐞𝐭𝐭𝐞𝐫 𝐟𝐮𝐭𝐮𝐫𝐞.
+                    𝐈 𝐬𝐩𝐞𝐜𝐢𝐚𝐥𝐢𝐳𝐞 𝐢𝐧 𝐰𝐞𝐛 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭, 𝐜𝐫𝐞𝐚𝐭𝐢𝐧𝐠 𝐰𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐢𝐭𝐡 𝐝𝐞𝐝𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐞𝐧𝐭𝐡𝐮𝐬𝐢𝐚𝐬𝐦 𝐮𝐬𝐢𝐧𝐠 𝐇𝐓𝐌𝐋, 𝐂𝐒𝐒, 𝐚𝐧𝐝 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭. 
+                    𝐚𝐧𝐝 𝐂𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲, 𝐈 𝐚𝐦 𝐚𝐥𝐬𝐨 𝐓𝐫𝐲𝐢𝐧𝐠 𝐭𝐨 𝐟𝐨𝐜𝐮𝐬 𝐨𝐧 𝐥𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤𝐬 𝐭𝐨 𝐞𝐧𝐡𝐚𝐧𝐜𝐞 𝐰𝐞𝐛𝐬𝐢𝐭𝐞 𝐩𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞 𝐚𝐧𝐝 𝐮𝐬𝐞𝐫 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞.</li>
                     <br>
-        
-                   <li> 𝐈𝐧 𝐚𝐝𝐝𝐢𝐭𝐢𝐨𝐧 𝐭𝐨 𝐰𝐞𝐛 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭, 𝐈 𝐡𝐚𝐯𝐞 𝐟𝐨𝐮𝐧𝐝𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐤𝐧𝐨𝐰𝐥𝐞𝐝𝐠𝐞 𝐢𝐧 𝐉𝐚𝐯𝐚 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠, 𝐒𝐐𝐋 ,𝐜𝐲𝐛𝐞𝐫𝐬𝐞𝐜𝐮𝐫𝐢𝐭𝐲, 𝐚𝐧𝐝 𝐥𝐞𝐯𝐞𝐫𝐚𝐠𝐢𝐧𝐠 𝐚𝐫𝐭𝐢𝐟𝐢𝐜𝐢𝐚𝐥 𝐢𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 𝐭𝐨 𝐨𝐩𝐭𝐢𝐦𝐢𝐳𝐞 𝐚𝐧𝐝 𝐚𝐜𝐜𝐞𝐥𝐞𝐫𝐚𝐭𝐞 𝐦𝐲 𝐣𝐨𝐛 𝐚𝐧𝐝 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐝𝐚𝐢𝐥𝐲 𝐭𝐚𝐬𝐤𝐬.
-                        𝐈 𝐚𝐥𝐬𝐨 𝐡𝐚𝐯𝐞 𝐩𝐫𝐚𝐜𝐭𝐢𝐜𝐚𝐥 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞 𝐢𝐧 𝐡𝐚𝐫𝐝𝐰𝐚𝐫𝐞 𝐦𝐚𝐢𝐧𝐭𝐞𝐧𝐚𝐧𝐜𝐞.</li>
+                    
+                    <li>𝐈𝐧 𝐚𝐝𝐝𝐢𝐭𝐢𝐨𝐧 𝐭𝐨 𝐰𝐞𝐛 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭, 𝐈 𝐡𝐚𝐯𝐞 𝐟𝐨𝐮𝐧𝐝𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐤𝐧𝐨𝐰𝐥𝐞𝐝𝐠𝐞 𝐢𝐧 𝐉𝐚𝐯𝐚 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠, 𝐒𝐐𝐋 ,𝐜𝐲𝐛𝐞𝐫𝐬𝐞𝐜𝐮𝐫𝐢𝐭𝐲, 𝐚𝐧𝐝 𝐥𝐞𝐯𝐞𝐫𝐚𝐠𝐢𝐧𝐠 𝐚𝐫𝐭𝐢𝐟𝐢𝐜𝐢𝐚𝐥 𝐢𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 𝐭𝐨 𝐨𝐩𝐭𝐢𝐦𝐢𝐳𝐞 𝐚𝐧𝐝 𝐚𝐜𝐜𝐞𝐥𝐞𝐫𝐚𝐭𝐞 𝐦𝐲 𝐣𝐨𝐛 𝐚𝐧𝐝 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐝𝐚𝐢𝐥𝐲 𝐭𝐚𝐬𝐤𝐬.
+                    𝐈 𝐚𝐥𝐬𝐨 𝐡𝐚𝐯𝐞 𝐩𝐫𝐚𝐜𝐭𝐢𝐜𝐚𝐥 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞 𝐢𝐧 𝐡𝐚𝐫𝐝𝐰𝐚𝐫𝐞 𝐦𝐚𝐢𝐧𝐭𝐞𝐧𝐚𝐧𝐜𝐞.</li>
                     <br>
-        
-                     <li> 𝐁𝐞𝐲𝐨𝐧𝐝 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠, 𝐈 𝐚𝐦 𝐩𝐫𝐨𝐟𝐢𝐜𝐢𝐞𝐧𝐭 𝐢𝐧 𝐌𝐢𝐜𝐫𝐨𝐬𝐨𝐟𝐭 𝐎𝐟𝐟𝐢𝐜𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬 𝐚𝐧𝐝 𝐝𝐚𝐭𝐚 𝐞𝐧𝐭𝐫𝐲, 
-                       𝐦𝐚𝐤𝐢𝐧𝐠 𝐦𝐞 𝐚 𝐯𝐞𝐫𝐬𝐚𝐭𝐢𝐥𝐞 𝐩𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐜𝐚𝐩𝐚𝐛𝐥𝐞 𝐨𝐟 𝐡𝐚𝐧𝐝𝐥𝐢𝐧𝐠 𝐯𝐚𝐫𝐢𝐨𝐮𝐬 𝐭𝐚𝐬𝐤𝐬 𝐞𝐟𝐟𝐞𝐜𝐭𝐢𝐯𝐞𝐥𝐲.</li> 
+                    
+                    <li>𝐁𝐞𝐲𝐨𝐧𝐝 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠, 𝐈 𝐚𝐦 𝐩𝐫𝐨𝐟𝐢𝐜𝐢𝐞𝐧𝐭 𝐢𝐧 𝐌𝐢𝐜𝐫𝐨𝐬𝐨𝐟𝐭 𝐎𝐟𝐟𝐢𝐜𝐞 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬 𝐚𝐧𝐝 𝐝𝐚𝐭𝐚 𝐞𝐧𝐭𝐫𝐲, 
+                    𝐦𝐚𝐤𝐢𝐧𝐠 𝐦𝐞 𝐚 𝐯𝐞𝐫𝐬𝐚𝐭𝐢𝐥𝐞 𝐩𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐜𝐚𝐩𝐚𝐛𝐥𝐞 𝐨𝐟 𝐡𝐚𝐧𝐝𝐥𝐢𝐧𝐠 𝐯𝐚𝐫𝐢𝐨𝐮𝐬 𝐭𝐚𝐬𝐤𝐬 𝐞𝐟𝐟𝐞𝐜𝐭𝐢𝐯𝐞𝐥𝐲.</li> 
                     <br>
-        
-                  <li> 𝗜 𝗮𝗺 𝗰𝗼𝗺𝗺𝗶𝘁𝘁𝗲𝗱 𝘁𝗼 𝗰𝗼𝗻𝘁𝗶𝗻𝘂𝗼𝘂𝘀 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗮𝗻𝗱 𝘀𝗲𝗹𝗳-𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝗺𝗲𝗻𝘁 𝘁𝗼 𝗲𝘅𝗰𝗲𝗹 𝗶𝗻 𝗺𝘆 𝗰𝗮𝗿𝗲𝗲𝗿 𝗮𝗻𝗱 𝗰𝗼𝗻𝘁𝗿𝗶𝗯𝘂𝘁𝗲 𝗽𝗼𝘀𝗶𝘁𝗶𝘃𝗲𝗹𝘆 𝘁𝗼 𝘁𝗵𝗲 𝘁𝗲𝗰𝗵 𝗶𝗻𝗱𝘂𝘀𝘁𝗿𝘆.</li>
+                    
+                    <li>𝐈 𝐚𝐦 𝐂𝐨𝐦𝐦𝐢𝐭𝐭𝐞𝐝 𝐭𝐨 𝐂𝐨𝐧𝐭𝐢𝐧𝐮𝐨𝐮𝐬 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐚𝐧𝐝 𝐒𝐞𝐥𝐟-𝐈𝐦𝐩𝐫𝐨𝐯𝐞𝐦𝐞𝐧𝐭 𝐭𝐨 𝐄𝐱𝐜𝐞𝐥 𝐢𝐧 𝐦𝐲 𝐂𝐚𝐫𝐞𝐞𝐫 𝐚𝐧𝐝 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐞 𝐏𝐨𝐬𝐢𝐭𝐢𝐯𝐞𝐥𝐲 𝐭𝐨 𝐭𝐡𝐞 𝐓𝐞𝐜𝐡 𝐈𝐧𝐝𝐮𝐬𝐭𝐫𝐲.</li>
                     <br>
-                
-                  <li> 𝗜 𝗽𝗼𝘀𝘀𝗲𝘀𝘀 𝘀𝘁𝗿𝗼𝗻𝗴 𝘃𝗼𝗶𝗰𝗲-𝗼𝘃𝗲𝗿 𝘀𝗸𝗶𝗹𝗹𝘀 𝘄𝗶𝘁𝗵 𝗽𝗿𝗶𝗼𝗿 𝗲𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲 𝗶𝗻 𝗿𝗲𝗰𝗼𝗿𝗱𝗶𝗻𝗴 𝗮𝘂𝗱𝗶𝗼𝗯𝗼𝗼𝗸𝘀 𝗮𝗻𝗱 𝗮𝗿𝘁𝗶𝗰𝗹𝗲𝘀. 𝗜𝗻 𝗮𝗱𝗱𝗶𝘁𝗶𝗼𝗻, 𝗜 𝗵𝗮𝘃𝗲 𝗲𝘅𝗰𝗲𝗹𝗹𝗲𝗻𝘁 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗮𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀 𝗮𝗻𝗱 𝗵𝗼𝗹𝗱 𝗮 𝗖𝟭 𝗹𝗲𝘃𝗲𝗹 𝗶𝗻 𝗘𝗻𝗴𝗹𝗶𝘀𝗵 𝗽𝗿𝗼𝗳𝗶𝗰𝗶𝗲𝗻𝗰𝘆.</li>
+                    
+                    <li>𝐈 𝐩𝐨𝐬𝐬𝐞𝐬𝐬 𝐒𝐭𝐫𝐨𝐧𝐠 𝐕𝐨𝐢𝐜𝐞-𝐎𝐯𝐞𝐫 𝐒𝐤𝐢𝐥𝐥𝐬 𝐰𝐢𝐭𝐡 𝐏𝐫𝐢𝐨𝐫 𝐄𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞 𝐢𝐧 𝐑𝐞𝐜𝐨𝐫𝐝𝐢𝐧𝐠 𝐀𝐮𝐝𝐢𝐨𝐛𝐨𝐨𝐤𝐬 𝐚𝐧𝐝 𝐀𝐫𝐭𝐢𝐜𝐥𝐞𝐬. 𝐈𝐧 𝐚𝐝𝐝𝐢𝐭𝐢𝐨𝐧, 𝐈 𝐡𝐚𝐯𝐞 𝐄𝐱𝐜𝐞𝐥𝐥𝐞𝐧𝐭 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐀𝐛𝐢𝐥𝐢𝐭𝐢𝐞𝐬 𝐚𝐧𝐝 𝐡𝐨𝐥𝐝 𝐚 𝐂𝟭 𝐥𝐞𝐯𝐞𝐥 𝐢𝐧 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐩𝐫𝐨𝐟𝐢𝐜𝐢𝐞𝐧𝐜𝐲.</li>
                     </span>
                     <br>
-                </p>
-                <button id="toggleButton" style="padding: 1rem ; background-color: black; border-radius: 2rem; font-size: 1.6rem; color: white; letter-spacing: 0.3rem; font-weight: 400; border: 2px solid white; transition: 0.3s ease; cursor: pointer; ">Show More</button>
-                </ul>
-
-            <div class="social-icons">
-                <a href="https://linktr.ee/Zeyad220" target="_blank"><i class="fa-solid fa-tree"></i>></i></a>
-                <a href="https://www.linkedin.com/in/zeyad-gaber-853b22220/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/zeyad-220" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/callmezeyad_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-
-            </div>
-            <a href="Images/cv.pdf" class="btn" target="_blank">CV</a>
-        </div>
-    </section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill">
-            <img src="Images/Pics/html-icon.png" alt="HTML">
-            <p>HTML</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/css-icon.png" alt="CSS">
-            <p>CSS</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/js-icon.png" alt="JavaScript">
-            <p>JavaScript</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/MS OFFICE.png" alt="MS OFFICE">
-            <p>MS OFFICE</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/sql.png" alt="SQL">
-            <p>SQL</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/Data-entry.png" alt="Data Entry">
-            <p>Data Entry</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/hr.png" alt="HR">
-            <p>Hr Recruiter</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/cold.png" alt="Cold Caller">
-            <p>Cold Calling</p>
-        </div>
-        <div class="skill">
-            <img src="Images/Pics/voice.png" alt="Voice Acting">
-            <p>Voice Acting</p>
-        </div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-        <div class="project">
-            <img src="Images/projects/WebPedia.png" alt="Project 1">
-            <p>WebPedia</p>
-            <a href="https://zeyad-220.github.io/WebPedia/" target="_blank"><button>View Project</button></a>
-        </div>
-        <div class="project">
-            <img src="Images/projects/Calculator.png" alt="Project 2">
-            <p>Advanced Calculator</p>
-            <a href="https://zeyad-220.github.io/Calculator/" target="_blank"><button>View Project</button></a>
-        </div>
-        <div class="project">
-            <img src="Images/projects/To-Do List.png" alt="Project 3">
-            <p>To Do List</p>
-            <a href="https://zeyad-220.github.io/To-Do-List/" target="_blank"><button>View Project</button></a>
-        </div>
-        <div class="project">
-            <img src="Images/projects/WeatherApp.png" alt="Project 4">
-            <p>Weather App</p>
-            <a href="https://zeyad-220.github.io/Weather-App/" target="_blank"><button>View Project</button></a>
-        </div>
-        <div class="project">
-            <img src="Images/projects/Digital Clock with Alarm.png" alt="Project 5">
-            <p>Digital Clock with Alarm</p>
-            <a href="https://zeyad-220.github.io/Digital-Clock-with-Alarm/" target="_blank"><button>View Project</button></a>
-        </div>
-        <div class="project">
-            <img src="Images/projects/Exchange Rate Converter.png" alt="Project 6">
-            <p>Exchange Rate Converter</p>
-            <a href="https://zeyad-220.github.io/Exchange-Rate-Converter/" target="_blank"><button>View Project</button></a>
-        </div>
-        <div class="project">
-            <img src="Images/projects/Tictactoe.png" alt="Project 7">
-            <p>2 Players TIC TAC TOE</p>
-            <a href="https://zeyad-220.github.io/Tic-tac-toe-2-players/" target="_blank"><button>View Project</button></a>
-        </div>
-    </div>
-</section>
-
-<!-- Certificates Section -->
-<section id="certificates" class="certificates-section">
-<h2>Certificates</h2>
-<div class="certificates">
-    <div class="certificate">
-        <img src="Images/Certificates/JS.png" alt="JS Certificate">
-        <p> Cisco _JS Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/CYBERSECURITY.png" alt="Cybersecurity Certificate">
-        <p>Cisco _Introduction to Cybersecurity Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/AI.png" alt="AI Certificate">
-        <p> HP _AI for Beginners Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/Modern Ai.png" alt=" Modern AI Certificate">
-        <p> cisco_Modern Ai Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/Google Analytics Certification.png" alt="Google Analytics Certificate">
-        <p> Google Analytics Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/DATA SCIENCE.png" alt="Data Science Certificate">
-        <p> Hp_Data Science Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/Cybersecurity Threat Landscape.png" alt="Cybersecurity Threat Certificate">
-        <p> Linkdin _Cybersecurity Threat Certificate </p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/IT.png" alt="IT Certificate">
-        <p> HP _IT for Business Success Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/IOT.png" alt="IOT Certificate">
-        <p> Cisco _Introduction to IoT Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/HARDWARE.png" alt="HARDWARE Certificate">
-        <p> Cisco _Computer Hardware Basics Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/Effective Leadership.png" alt="Effective Leadership Certificate">
-        <p> HP _Effective Leadership Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/JAVA SE.png" alt="JAVA SE1 Certificate">
-        <p> INTRAST _Java SE: Programming I Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/MYSQL.png" alt="MySQL Fundamentals Certificate">
-        <p> INTRAST _MySQL Fundamentals Certificate</p>
-    </div>
-    <div class="certificate">
-        <img src="Images/Certificates/EF.jpg" alt="Ef Set Certificate">
-        <p> EF Set C1 Advanced in English Certificate</p>
-    </div>
-</div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <div class="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit" onclick="sendMessage()">Send Message</button>
-        <div id="response-message"></div>
-    </div>
-</section>
-
-<!-- Footer Section -->
-<footer>
-    <p>© 2025 Zeyad Gaber | All Rights Reserved</p>
-</footer>
-
-
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
+                    </p>
+                    <button id="toggleButton" style="padding: 1rem ; background-color: black; border-radius: 2rem; font-size: 1.6rem; color: white; letter-spacing: 0.3rem; font-weight: 400; border: 2px solid white; transition: 0.3s ease; cursor: pointer; ">Show More</button>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://linktr.ee/zeyad22" target="_blank"><i class="fa-solid fa-tree"></i></a>
+                        <a href="https://www.linkedin.com/in/zeyad-gaber-853b2220/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/zeyad-220" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/callmezeyad_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="Images/cv.pdf" class="btn" target="_blank">CV</a>
+                    </div>
+                    </section>
+                    
+                    <!-- Skills Section -->
+                    <section id="skills" class="skills-section">
+                        <h2>Skills</h2>
+                        <div class="skills">
+                            <div class="skill">
+                                <img src="Images/Pics/html-icon.png" alt="HTML">
+                                <p>HTML</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/css-icon.png" alt="CSS">
+                                <p>CSS</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/js-icon.png" alt="JavaScript">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/MS OFFICE.png" alt="MS OFFICE">
+                                <p>MS OFFICE</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/sql.png" alt="SQL">
+                                <p>SQL</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/Data-entry.png" alt="Data Entry">
+                                <p>Data Entry</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/hr.png" alt="HR">
+                                <p>Hr Recruiter</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/cold.png" alt="Cold Caller">
+                                <p>Cold Calling</p>
+                            </div>
+                            <div class="skill">
+                                <img src="Images/Pics/voice.png" alt="Voice Acting">
+                                <p>Voice Acting</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Projects Section -->
+                    <section id="projects" class="projects-section">
+                        <h2>Projects</h2>
+                        <div class="projects-grid">
+                            <div class="project">
+                                <img src="Images/projects/WebPedia.png" alt="Project 1">
+                                <p>WebPedia</p>
+                                <a href="https://zeyad-220.github.io/WebPedia/" target="_blank"><button>View Project</button></a>
+                            </div>
+                            <div class="project">
+                                <img src="Images/projects/Calculator.png" alt="Project 2">
+                                <p>Advanced Calculator</p>
+                                <a href="https://zeyad-220.github.io/Calculator/" target="_blank"><button>View Project</button></a>
+                            </div>
+                            <div class="project">
+                                <img src="Images/projects/To-Do List.png" alt="Project 3">
+                                <p>To Do List</p>
+                                <a href="https://zeyad-220.github.io/To-Do-List/" target="_blank"><button>View Project</button></a>
+                            </div>
+                            <div class="project">
+                                <img src="Images/projects/WeatherApp.png" alt="Project 4">
+                                <p>Weather App</p>
+                                <a href="https://zeyad-220.github.io/Weather-App/" target="_blank"><button>View Project</button></a>
+                            </div>
+                            <div class="project">
+                                <img src="Images/projects/Digital Clock with Alarm.png" alt="Project 5">
+                                <p>Digital Clock with Alarm</p>
+                                <a href="https://zeyad-220.github.io/Digital-Clock-with-Alarm/" target="_blank"><button>View Project</button></a>
+                            </div>
+                            <div class="project">
+                                <img src="Images/projects/Exchange Rate Converter.png" alt="Project 6">
+                                <p>Exchange Rate Converter</p>
+                                <a href="https://zeyad-220.github.io/Exchange-Rate-Converter/" target="_blank"><button>View Project</button></a>
+                            </div>
+                            <div class="project">
+                                <img src="Images/projects/Tictactoe.png" alt="Project 7">
+                                <p>2 Players TIC TAC TOE</p>
+                                <a href="https://zeyad-220.github.io/Tic-tac-toe-2-players/" target="_blank"><button>View Project</button></a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Certificates Section -->
+                    <section id="certificates" class="certificates-section">
+                        <h2>Certificates</h2>
+                        <div class="certificates">
+                            <div class="certificate">
+                                <img src="Images/Certificates/JS.png" alt="JS Certificate">
+                                <p> Cisco _JS Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/CYBERSECURITY.png" alt="Cybersecurity Certificate">
+                                <p>Cisco _Introduction to Cybersecurity Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/AI.png" alt="AI Certificate">
+                                <p> HP _AI for Beginners Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/Modern Ai.png" alt=" Modern AI Certificate">
+                                <p> cisco_Modern Ai Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/Google Analytics Certification.png" alt="Google Analytics Certificate">
+                                <p> Google Analytics Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/DATA SCIENCE.png" alt="Data Science Certificate">
+                                <p> Hp_Data Science Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/Cybersecurity Threat Landscape.png" alt="Cybersecurity Threat Certificate">
+                                <p> Linkdin _Cybersecurity Threat Certificate </p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/IT.png" alt="IT Certificate">
+                                <p> HP _IT for Business Success Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/IOT.png" alt="IOT Certificate">
+                                <p> Cisco _Introduction to IoT Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/HARDWARE.png" alt="HARDWARE Certificate">
+                                <p> Cisco _Computer Hardware Basics Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/Effective Leadership.png" alt="Effective Leadership Certificate">
+                                <p> HP _Effective Leadership Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/JAVA SE.png" alt="JAVA SE1 Certificate">
+                                <p> INTRAST _Java SE: Programming I Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/MYSQL.png" alt="MySQL Fundamentals Certificate">
+                                <p> INTRAST _MySQL Fundamentals Certificate</p>
+                            </div>
+                            <div class="certificate">
+                                <img src="Images/Certificates/EF.jpg" alt="Ef Set Certificate">
+                                <p> EF Set C1 Advanced in English Certificate</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Contact Section -->
+                    <section id="contact" class="contact-section">
+                        <h2>Contact Me</h2>
+                        <div class="contact-form">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                            <button type="submit" onclick="sendMessage()">Send Message</button>
+                            <div id="response-message"></div>
+                        </div>
+                    </section>
+                    
+                    <!-- Footer Section -->
+                    <footer>
+                        <p>© 2025 Zeyad Gaber | All Rights Reserved</p>
+                    </footer>
+                    
+                    <script src="script.js"></script>
+                    
+                    </body>
+                    
+                    </html>
