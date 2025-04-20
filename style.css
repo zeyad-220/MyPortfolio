@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
     background-color: black;
     color: white;
+    transition: background-color 0.3s ease;
 }
 
 header {
@@ -29,6 +30,7 @@ header {
     left: 0;
     width: 100%;
     padding: 1rem 9%;
+    color: white;
     background-color: black;
     filter: drop-shadow(10px);
     display: flex;
@@ -162,7 +164,7 @@ span {
     transition: 0.2s linear;
     border-radius: 50%;
     animation: float 1.5s infinite alternate;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+   
 }
 
 .home-img img:hover {
@@ -276,6 +278,12 @@ span {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
+@media (max-width: 767px) {
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+    
+}
 /* Certificates Section */
 .certificates-section {
     padding: 50px 20px;
@@ -311,6 +319,10 @@ span {
     transform: translateY(-10px);
     box-shadow: 0 0 15px rgba(41, 36, 36, 0.8);
 }
+@media (max-width: 767px) {
+    .certificates {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }}
 
 /* Projects Section */
 .projects-section {
@@ -362,6 +374,11 @@ span {
     background: #ff3333;
 }
 
+@media (max-width: 767px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }}
+    
 /* Contact Section */
 .contact-section {
     padding: 50px 20px;
@@ -442,4 +459,341 @@ footer {
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .home .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+    }
+
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+
+/* Theme Toggle Button */
+.theme-toggle-container {
+    position: fixed;
+    top: 10px; /* Adjust the position as needed */
+    left: 10px; /* Adjust the position as needed */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem; /* Increased font size for a bigger button */
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 0.5rem; /* Added padding for a bigger button */
+    border-radius: 50%; /* Rounded corners for a circular button */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added shadow for better visibility */
+}
+
+.theme-toggle:hover {
+    color: #b74b4b;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+body.light-mode .theme-toggle {
+    color: #333;
+}
+
+body.light-mode .theme-toggle:hover {
+    color: #b74b4b;
+}
+
+@media (min-width: 768px) {
+    .theme-toggle-container {
+        top: 20px;
+        right: 20px;
+        left: auto;
+    }
+}
+
+
+
+
+
+/* Light Mode */
+body.light-mode {
+    background-color: #fdf5e6;
+    color: #333;
+}
+
+
+
+body.light-mode .home {
+    background-color: #fdf5e6;
+    color: #333;
+}
+
+body.light-mode .logo {
+    background-image: url(logoo.png);
+    background-size: cover;
+    background-position: center;
+  
+}
+
+body.light-mode .logo img {
+    background-image: url(logoo.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+body.light-mode .btn {
+    size: 150px;
+    background-color: #fdf5e6;
+    border-color: #333;
+    color: #333;
+}
+
+body.light-mode .btn:hover {
+    background-color: #b74b4b;
+    color: white;
+}
+
+body.light-mode .social-icons a {
+    border-color: #333;
+    color: #333;
+}
+
+body.light-mode .social-icons a:hover {
+    background-color: #b74b4b;
+    color: white;
+}
+
+body.light-mode header {
+    background-color: #fff0e5;
+    color: black;
+}
+body.light-mode nav a {
+    background-color: #fff0e5;
+    color: black;
+}
+
+body.light-mode nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+body.light-mode .skill {
+    background-color: #fff0e5;
+    color: black;
+}
+
+body.light-mode .skills-section {
+    background-color: #fff0e5;
+    color: black;
+}
+
+body.light-mode .projects-section {
+    background-color: #fff0e5;
+    color: black;
+}
+
+body.light-mode .project {
+    background-color: #fff0e5;
+    color: black;
+}
+
+body.light-mode .project img {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .project button {
+    background-color: #d0a77c;
+}
+
+body.light-mode .certificates-section {
+    background-color: #fff0e5;
+    color: black;
+}
+
+body.light-mode .contact-section {
+    background-color: #fff0e5;
+    color: black;
+}
+
+body.light-mode .certificate img {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .contact-form {
+    background: #faebd7;
+}
+
+body.light-mode .contact-form input, body.light-mode .contact-form textarea {
+    background: #e2bc95;
+    border-color: #ccc;
+    color: #333;
+}
+
+body.light-mode .contact-form button {
+    background: #e2bc95;
+    border-color: #b74b4b;
+    color: white;
+}
+
+body.light-mode .contact-form button:hover {
+    background: #845c54;
+}
+
+body.light-mode footer {
+    background: #d0a77c;
+}
+
+body.light-mode .theme-toggle {
+    color: #333;
+}
+
+body.light-mode .theme-toggle:hover {
+    color: #b74b4b;
+}
+
+/* Dark Mode (default) */
+body {
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    background-image: url(logo-dark.png); /* Update to your dark mode logo */
+    background-size: cover;
+    background-position: center;
+    color: #b74b4b;
+}
+
+.logo img {
+    background-image: url(logo-dark.png); /* Update to your dark mode logo */
+    background-size: cover;
+    background-position: center;
+    color: #b74b4b;
+}
+
+.btn {
+    background-color: black;
+    border-color: #b74b4b;
+    color: #b74b4b;
+}
+
+.btn:hover {
+    background-color: #b74b4b;
+    color: black;
+}
+
+.social-icons a {
+    border-color: #b74b4b;
+    color: #b74b4b;
+}
+
+.social-icons a:hover {
+    background-color: #b74b4b;
+    color: white;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+.skill {
+    background-color: black;
+    color: white;
+}
+
+.skills-section {
+    background-color: black;
+    color: white;
+}
+
+.projects-section {
+    background-color: black;
+    color: white;
+}
+
+.project {
+    background-color: black;
+    color: white;
+}
+
+.project img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.project button {
+    background-color: #e60000;
+}
+
+.certificates-section {
+    background-color: black;
+    color: white;
+}
+
+.contact-section {
+    background-color: black;
+    color: white;
+}
+
+.certificate img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form {
+    background: #222;
+}
+
+.contact-form input, .contact-form textarea {
+    background: #1a1a1a;
+    border-color: #444;
+    color: #fff;
+}
+
+.contact-form button {
+    background: #b74b4b;
+    border-color: #b74b4b;
+    color: white;
+}
+
+.contact-form button:hover {
+    background: #845c54;
+}
+
+footer {
+    background: #b74b4b;
+}
+
+.theme-toggle {
+    color: white;
+}
+
+.theme-toggle:hover {
+    color: #b74b4b;
 }
