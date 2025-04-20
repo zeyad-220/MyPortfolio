@@ -83,35 +83,36 @@ document.addEventListener('DOMContentLoaded', () => {
             profile.src = 'profile-dark.jpg'; // Update to your dark mode profile image
         }
     });
-
+});
     emailjs.init("bVz_AOZpAbCR2gADo");
 
     function sendMessage() {
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var message = document.getElementById("message").value;
-        var responseMessage = document.getElementById("response-message");
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var responseMessage = document.getElementById("response-message");
 
-        if (!name || !email || !message) {
-            responseMessage.style.display = "block";
-            responseMessage.innerText = "Please fill in all fields.";
-            responseMessage.style.backgroundColor = "orange";
-            return;
-        }
-
-        emailjs.send("service_ug6050e", "template_bge8w3g", {
-            name: name,
-            email: email,
-            message: message
-        }).then(function(response) {
-            responseMessage.style.display = "block";
-            responseMessage.innerText = "Message sent successfully!";
-            responseMessage.style.backgroundColor = "green";
-        }, function(error) {
-            responseMessage.style.display = "block";
-            responseMessage.innerText = "Failed to send message. Check console for details.";
-            responseMessage.style.backgroundColor = "red";
-            console.error("EmailJS Error:", error);
-        });
+    // Check if fields are filled
+    if (!name || !email || !message) {
+        responseMessage.style.display = "block";
+        responseMessage.innerText = "Please fill in all fields.";
+        responseMessage.style.backgroundColor = "orange";
+        return;
     }
-});
+
+    // Send email via EmailJS
+    emailjs.send("service_ug6050e", "template_bge8w3g", {
+        name: name,
+        email: email,
+        message: message
+    }).then(function(response) {
+        responseMessage.style.display = "block";
+        responseMessage.innerText = "Message sent successfully!";
+        responseMessage.style.backgroundColor = "green";
+    }, function(error) {
+        responseMessage.style.display = "block";
+        responseMessage.innerText = "Failed to send message. Check console for details.";
+        responseMessage.style.backgroundColor = "red";
+        console.error("EmailJS Error:", error);
+    });
+}
