@@ -754,7 +754,7 @@ footer {
 }
 
 .theme-toggle:hover {
-    color: #fff;
+    color: gold;
     transform: scale(1.1) rotate(180deg);
     background-color: #b74b4b;
     box-shadow: 0 0 30px rgba(183, 75, 75, 0.5);
@@ -767,7 +767,7 @@ body.light-mode .theme-toggle {
 }
 
 body.light-mode .theme-toggle:hover {
-    color: #fff;
+    color: gold;
     background-color: #b74b4b;
 }
 
