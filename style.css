@@ -937,7 +937,10 @@ body.light-mode .theme-toggle {
 }
 
 body.light-mode .theme-toggle:hover {
-    color: #b74b4b;
+    color: #FFD700;
+    transform: scale(1.1) rotate(180deg);
+    background-color: #b74b4b;
+    box-shadow: 0 0 30px rgba(183, 75, 75, 0.5);
 }
 
 /* Dark Mode (default) */
@@ -1052,10 +1055,4 @@ footer {
     background: #b74b4b;
 }
 
-.theme-toggle {
-    color: white;
-}
-
-.theme-toggle:hover {
-    color: #b74b4b;
-}
+/* Theme toggle styles are already defined above */
