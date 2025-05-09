@@ -262,12 +262,34 @@
                     </section>
                     
                     <!-- Footer Section -->
-                    <footer>
-                        <p>© 2025 Zeyad Gaber | All Rights Reserved</p>
-                    </footer>
-                    
+                    <footer class="footer-with-arrow">
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <p>© 2025 Zeyad Gaber | All Rights Reserved</p>
+</footer>
+                
+
                     <script src="script.js"></script>
-                    
+                    <script>
+                     const scrollBtn = document.getElementById("scrollToTopBtn");
+
+                     window.onscroll = function () {
+                      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                      scrollBtn.style.display = "block";
+                      } else {
+                      scrollBtn.style.display = "none";
+                       }
+                      };
+
+                     scrollBtn.addEventListener("click", () => {
+                      window.scrollTo({
+                       top: 0,
+                    behavior: 'smooth'
+                       });
+                     });
+                    </script>
+
                     </body>
                     
                     </html>
