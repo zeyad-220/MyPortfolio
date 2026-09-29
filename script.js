@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             logo.src = 'light.png'; // Update to your light mode logo
             profile.src = 'profile-light.jpg'; // Update to your light mode profile image
         } else {
-            logo.src = 'logo-dark.png'; // Update to your dark mode logo
+            logo.src = 'dark.png'; // Update to your dark mode logo
             profile.src = 'profile-dark.jpg'; // Update to your dark mode profile image
         }
     });
