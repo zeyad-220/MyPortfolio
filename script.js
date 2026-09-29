@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const logo = document.getElementById('logo');
         const profile = document.getElementById('profile');
         if (document.body.classList.contains('light-mode')) {
-            logo.src = 'logo-light.png'; // Update to your light mode logo
+            logo.src = 'light.png'; // Update to your light mode logo
             profile.src = 'profile-light.jpg'; // Update to your light mode profile image
         } else {
             logo.src = 'logo-dark.png'; // Update to your dark mode logo
