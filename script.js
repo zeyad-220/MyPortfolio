@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const typingElement = document.getElementById('typing');
-    const words = ["Front-End Web Developer", "Computer Technician", "Hr Recruiter", "Cold Caller", "Voice Actor"];
+    const words = ["IT Technician","Front-End Web Developer", "Real Estate & Telemarketing Sales Representative", "Hr Recruiter", "BIS Student", "Voice Actor"];
     let wordIndex = 0;
     let letterIndex = 0;
     let currentWord = '';
