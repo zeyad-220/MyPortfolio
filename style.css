@@ -863,14 +863,14 @@ body.light-mode .home {
 }
 
 body.light-mode .logo {
-    background-image: url(logoo.png);
+    background-image: url(light.png);
     background-size: cover;
     background-position: center;
   
 }
 
 body.light-mode .logo img {
-    background-image: url(logoo.png);
+    background-image: url(light.png);
     background-size: cover;
     background-position: center;
     
@@ -1012,14 +1012,14 @@ body {
 }
 
 .logo {
-    background-image: url(logo-dark.png); /* Update to your dark mode logo */
+    background-image: url(dark.png); /* Update to your dark mode logo */
     background-size: cover;
     background-position: center;
     color: #b74b4b;
 }
 
 .logo img {
-    background-image: url(logo-dark.png); /* Update to your dark mode logo */
+    background-image: url(dark.png); /* Update to your dark mode logo */
     background-size: cover;
     background-position: center;
     color: #b74b4b;
