@@ -1,5 +1,9 @@
 /* Arabic translations. English is the default text in index.html; script.js swaps it for these when the visitor picks Arabic. */
 window.AR_DICT={
+"Worked in CRM software and learned new tools and systems quickly in a fast-paced, target-driven setting.": "اشتغلت على برامج الـ CRM وتعلمت أدوات وأنظمة جديدة بسرعة في بيئة سريعة وقائمة على الأهداف.",
+"Used active listening and clear communication to understand each person’s need and explain next steps, the same approach I use in IT support.": "استخدمت الاستماع الفعّال والتواصل الواضح لفهم احتياج كل شخص وشرح الخطوات التالية، وهو نفس أسلوبي في الدعم الفني.",
+"Explained services clearly to customers who were not experts, a skill I now use to guide non-technical users through IT problems.": "شرحت الخدمات بوضوح لعملاء غير متخصصين، وهي مهارة أستخدمها الآن لإرشاد المستخدمين غير التقنيين في حل مشاكل الـ IT.",
+"Stayed accurate and consistent across 300–400 calls a day, the same attention to detail that ticket and CRM records need.": "حافظت على الدقة والاتساق على مدار 300–400 مكالمة يومياً، وهو نفس الاهتمام بالتفاصيل الذي تحتاجه سجلات التذاكر والـ CRM.",
 "4 ROLES": "4 وظائف",
 "IT TECHNICIAN · TECHNICAL SUPPORT": "فني ⁦IT⁩ · دعم فني",
 "I’m an IT technician from Egypt with a diploma in Computer Science, currently pursuing a bachelor’s degree in Business Information Systems. I do hands-on Windows installation, driver setup, diagnostics and troubleshooting, and I build my own tools for the job: a step-by-step troubleshooting guide, a help desk ticket tracker and an employee ticket portal. I explain fixes in plain language and keep learning.": "أنا فني IT من مصر، حاصل على دبلوم في علوم الحاسب، وأدرس حالياً للحصول على درجة البكالوريوس في نظم المعلومات الإدارية. أعمل عملياً على تثبيت ويندوز وتعريفات الأجهزة والتشخيص وحل المشكلات، وأبني أدواتي الخاصة للشغل: دليل خطوة بخطوة لحل المشكلات، وأداة لتتبع تذاكر الـ Help Desk، وبوابة تذاكر للموظفين. أشرح الحلول بلغة بسيطة وأواصل التعلم.",
