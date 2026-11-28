@@ -1,5 +1,6 @@
 /* Arabic translations. English is the default text in index.html; script.js swaps it for these when the visitor picks Arabic. */
 window.AR_DICT={
+"1 PROJECT": "مشروع واحد",
 "REAL ESTATE REPRESENTATIVE · LEAD GENERATION": "مندوب عقارات · توليد العملاء المحتملين",
 "I’m a real estate representative from Egypt with experience in real estate and roofing: 400–500 outbound calls a day, lead qualification, appointment setting and accurate CRM records. I build rapport, handle objections and keep every lead moving. I have a diploma in Computer Science and am currently pursuing a bachelor’s degree in Business Information Systems, so I pick up new tools and CRM systems fast.": "أنا مندوب عقارات من مصر، عندي خبرة في العقارات والأسقف (روفينج): 400–500 مكالمة صادرة يومياً، وتأهيل العملاء المحتملين، وتحديد المواعيد، وسجلات CRM دقيقة. أبني علاقة مع العميل، وأتعامل مع الاعتراضات، وأبقي كل عميل محتمل في المسار. حاصل على دبلوم في علوم الحاسب، وأدرس حالياً للحصول على درجة البكالوريوس في نظم المعلومات الإدارية، فبتعلم الأدوات وأنظمة الـ CRM بسرعة.",
 "Real Estate & Outreach": "العقارات والتواصل",
