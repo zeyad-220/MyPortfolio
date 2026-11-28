@@ -24,17 +24,95 @@
 <meta name="twitter:description" content="22 live projects, hands-on IT support experience and 20 certificates. Based in Alexandria, Egypt.">
 <meta name="twitter:image:alt" content="Zeyad Gaber – IT Technician, Front-End Developer, Real Estate Cold Caller">
 <meta name="twitter:image" content="https://zeyad-220.github.io/MyPortfolio/og-image.jpg?v=36">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://zeyad-220.github.io/MyPortfolio/#website",
+   "url": "https://zeyad-220.github.io/MyPortfolio/",
+   "name": "Zeyad Gaber",
+   "inLanguage": [
+    "en",
+    "ar"
+   ],
+   "publisher": {
+    "@id": "https://zeyad-220.github.io/MyPortfolio/#person"
+   }
+  },
+  {
+   "@type": "ProfilePage",
+   "@id": "https://zeyad-220.github.io/MyPortfolio/#profile",
+   "url": "https://zeyad-220.github.io/MyPortfolio/",
+   "name": "Zeyad Gaber – IT Technician · Front-End Developer · Real Estate Cold Caller",
+   "isPartOf": {
+    "@id": "https://zeyad-220.github.io/MyPortfolio/#website"
+   },
+   "inLanguage": "en",
+   "mainEntity": {
+    "@id": "https://zeyad-220.github.io/MyPortfolio/#person"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://zeyad-220.github.io/MyPortfolio/#person",
+   "name": "Zeyad Gaber",
+   "alternateName": "زياد جابر",
+   "url": "https://zeyad-220.github.io/MyPortfolio/",
+   "image": "https://zeyad-220.github.io/MyPortfolio/profile-dark.webp",
+   "jobTitle": [
+    "IT Technician",
+    "Front-End Web Developer",
+    "Real Estate Cold Caller"
+   ],
+   "description": "IT technician, front-end developer and real estate cold caller from Egypt, with a diploma in Computer Science, currently pursuing a bachelor's degree in Business Information Systems.",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Alexandria",
+    "addressCountry": "EG"
+   },
+   "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Alexandria Advanced Technical School Mohrembek",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Alexandria",
+     "addressCountry": "EG"
+    }
+   },
+   "knowsAbout": [
+    "IT troubleshooting",
+    "Windows",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SQL",
+    "Cold calling",
+    "CRM",
+    "Data entry"
+   ],
+   "sameAs": [
+    "https://www.linkedin.com/in/zeyad-gaber-it/",
+    "https://github.com/zeyad-220",
+    "https://www.instagram.com/callmezeyad_/",
+    "https://linktr.ee/Zeyad220"
+   ]
+  }
+ ]
+}
+</script>
 <link rel="icon" href="dark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Cairo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;if(localStorage.getItem('lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;if(localStorage.getItem('lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.write('<script src="lang-ar.js"><\/script>')}}catch(e){}</script>
 </head>
 <body>
 <header class="bar">
-  <a href="#home" class="brand" aria-label="Zeyad Gaber, back to top"><img class="logo logo-dark" src="dark.png" alt=""><img class="logo logo-light" src="light.png" alt=""></a>
+  <a href="#home" class="brand" aria-label="Zeyad Gaber, back to top"><img class="logo logo-dark" src="dark.png" alt="" width="532" height="327"><img class="logo logo-light" src="light.png" alt="" width="541" height="322"></a>
   <nav id="nav" aria-label="Main">
     <a href="#home">Home</a>
     <a href="#skills">Skills</a>
@@ -44,6 +122,7 @@
     <a href="#contact">Contact</a>
   </nav>
   <div class="tools">
+    <button id="search" class="icon-btn" type="button" aria-label="Search the portfolio" aria-haspopup="dialog"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></button>
     <button id="lang" class="icon-btn lang-btn" type="button" aria-label="Switch language to Arabic" lang="ar"><span>ع</span></button>
     <button id="theme" class="icon-btn" type="button" aria-label="Switch between dark and light theme"><i class="fas fa-circle-half-stroke" aria-hidden="true"></i></button>
     <button id="menu" class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i class="fas fa-bars" aria-hidden="true"></i></button>
@@ -54,7 +133,7 @@
   <div class="tl"><span>[001] INTRO</span><span>ZEYAD GABER</span></div>
   <div class="intro-grid">
     <div class="cover-name"><strong>ZEYAD GABER</strong><span>IT TECHNICIAN · FRONT-END DEVELOPER · REAL ESTATE COLD CALLER</span></div>
-    <figure class="cutout"><img class="p-dark" src="profile-dark.webp" alt="Portrait of Zeyad Gaber" width="880" height="1100"><span class="light-wrap"><img class="p-light-bg" src="profile-light.webp" aria-hidden="true"><img class="p-light" src="profile-light.webp" alt="Portrait of Zeyad Gaber" width="880" height="1100"></span></figure>
+    <figure class="cutout"><img class="p-dark" src="profile-dark.webp" alt="Portrait of Zeyad Gaber" width="880" height="1100"><span class="light-wrap"><img class="p-light-bg" src="profile-light.webp" alt="" aria-hidden="true" width="589" height="940"><img class="p-light" src="profile-light.webp" alt="Portrait of Zeyad Gaber" width="880" height="1100"></span></figure>
     <div class="intro-body">
       <h1>Hi, I’m<br>Zeyad</h1>
       <p class="typing">I’m a <span id="typing">IT Technician</span><span class="caret" aria-hidden="true"></span></p>
@@ -79,7 +158,7 @@
 <section id="skills" class="skills-sec reveal">
   <div class="tl"><span>[002] SKILLS</span></div>
   <h2 class="big">Skills</h2>
-  <div class="skill-groups"><div><h3>Technical</h3><ul class="skills"><li><img src="Images/Pics/it.webp" alt="" loading="lazy">IT Technician</li><li><img src="Images/Pics/html-icon.webp" alt="" loading="lazy">HTML</li><li><img src="Images/Pics/css-icon.webp" alt="" loading="lazy">CSS</li><li><img src="Images/Pics/js-icon.webp" alt="" loading="lazy">JavaScript</li><li><img src="Images/Pics/sql.webp" alt="" loading="lazy">SQL (Basic)</li><li><img src="Images/Pics/MS OFFICE.webp" alt="" loading="lazy">MS Office</li><li><img src="Images/Pics/Data-entry.webp" alt="" loading="lazy">Data Entry</li><li><img src="Images/Pics/gen/it-support.webp" alt="" loading="lazy">IT Support Fundamentals</li><li><img src="Images/Pics/gen/windows.webp" alt="" loading="lazy">Windows Troubleshooting</li><li><img src="Images/Pics/gen/diagnostics.webp" alt="" loading="lazy">System Diagnostics</li><li><img src="Images/Pics/gen/hardware.webp" alt="" loading="lazy">Hardware Maintenance</li><li><img src="Images/Pics/gen/networking.webp" alt="" loading="lazy">Basic Networking</li><li><img src="Images/Pics/gen/cyber.webp" alt="" loading="lazy">Cybersecurity Fundamentals</li><li><img src="Images/Pics/gen/responsive.webp" alt="" loading="lazy">Responsive Web Design</li><li><img src="Images/Pics/gen/java.webp" alt="" loading="lazy">Java (Fundamentals)</li><li><img src="Images/Pics/gen/analytics.webp" alt="" loading="lazy">Google Analytics</li><li><img src="Images/Pics/gen/ai.webp" alt="" loading="lazy">AI Workflow Tools</li><li><img src="Images/Pics/gen/research.webp" alt="" loading="lazy">Research &amp; Analysis</li><li><img src="Images/Pics/gen/docs.webp" alt="" loading="lazy">Documentation</li><li><img src="Images/Pics/gen/translation.webp" alt="" loading="lazy">English–Arabic Translation</li><li><img src="Images/Pics/gen/transcription.webp" alt="" loading="lazy">Audio Transcription</li><li><img src="Images/Pics/gen/typing.webp" alt="" loading="lazy">Fast &amp; Accurate Typing</li></ul></div><div><h3>Sales and people</h3><ul class="skills"><li><img src="Images/Pics/real-estate-cold-caller.webp" alt="" loading="lazy">Real Estate Representative</li><li><img src="Images/Pics/tele.webp" alt="" loading="lazy">Telemarketing Representative</li><li><img src="Images/Pics/cold.webp" alt="" loading="lazy">Cold Calling</li><li><img src="Images/Pics/hr.webp" alt="" loading="lazy">HR Recruiter</li><li><img src="Images/Pics/voice.webp" alt="" loading="lazy">Voice Acting</li><li><img src="Images/Pics/gen/target.webp" alt="" loading="lazy">Lead Generation</li><li><img src="Images/Pics/gen/funnel.webp" alt="" loading="lazy">Lead Qualification</li><li><img src="Images/Pics/gen/objection.webp" alt="" loading="lazy">Objection Handling</li><li><img src="Images/Pics/gen/calendar.webp" alt="" loading="lazy">Appointment Setting</li><li><img src="Images/Pics/gen/handshake.webp" alt="" loading="lazy">Negotiation</li><li><img src="Images/Pics/gen/crm.webp" alt="" loading="lazy">CRM Systems</li><li><img src="Images/Pics/gen/communication.webp" alt="" loading="lazy">Communication</li><li><img src="Images/Pics/gen/listening.webp" alt="" loading="lazy">Active Listening</li><li><img src="Images/Pics/gen/puzzle.webp" alt="" loading="lazy">Problem Solving</li><li><img src="Images/Pics/gen/adapt.webp" alt="" loading="lazy">Adaptability</li><li><img src="Images/Pics/gen/time.webp" alt="" loading="lazy">Time Management</li><li><img src="Images/Pics/gen/team.webp" alt="" loading="lazy">Team Collaboration</li><li><img src="Images/Pics/gen/remote.webp" alt="" loading="lazy">Remote Work</li><li><img src="Images/Pics/gen/arabic.webp" alt="" loading="lazy">Arabic: Native</li><li><img src="Images/Pics/gen/english.webp" alt="" loading="lazy">English: Upper Intermediate (B2-C1)</li></ul></div></div>
+  <div class="skill-groups"><div><h3>Technical</h3><ul class="skills"><li><img src="Images/Pics/it.webp" alt="" loading="lazy" width="512" height="512">IT Technician</li><li><img src="Images/Pics/html-icon.webp" alt="" loading="lazy" width="256" height="256">HTML</li><li><img src="Images/Pics/css-icon.webp" alt="" loading="lazy" width="512" height="512">CSS</li><li><img src="Images/Pics/js-icon.webp" alt="" loading="lazy" width="512" height="512">JavaScript</li><li><img src="Images/Pics/sql.webp" alt="" loading="lazy" width="256" height="256">SQL (Basic)</li><li><img src="Images/Pics/MS OFFICE.webp" alt="" loading="lazy" width="256" height="256">MS Office</li><li><img src="Images/Pics/Data-entry.webp" alt="" loading="lazy" width="256" height="256">Data Entry</li><li><img src="Images/Pics/gen/it-support.webp" alt="" loading="lazy" width="256" height="256">IT Support Fundamentals</li><li><img src="Images/Pics/gen/windows.webp" alt="" loading="lazy" width="256" height="256">Windows Troubleshooting</li><li><img src="Images/Pics/gen/diagnostics.webp" alt="" loading="lazy" width="256" height="256">System Diagnostics</li><li><img src="Images/Pics/gen/hardware.webp" alt="" loading="lazy" width="256" height="256">Hardware Maintenance</li><li><img src="Images/Pics/gen/networking.webp" alt="" loading="lazy" width="256" height="256">Basic Networking</li><li><img src="Images/Pics/gen/cyber.webp" alt="" loading="lazy" width="256" height="256">Cybersecurity Fundamentals</li><li><img src="Images/Pics/gen/responsive.webp" alt="" loading="lazy" width="256" height="256">Responsive Web Design</li><li><img src="Images/Pics/gen/java.webp" alt="" loading="lazy" width="256" height="256">Java (Fundamentals)</li><li><img src="Images/Pics/gen/analytics.webp" alt="" loading="lazy" width="256" height="256">Google Analytics</li><li><img src="Images/Pics/gen/ai.webp" alt="" loading="lazy" width="256" height="256">AI Workflow Tools</li><li><img src="Images/Pics/gen/research.webp" alt="" loading="lazy" width="256" height="256">Research &amp; Analysis</li><li><img src="Images/Pics/gen/docs.webp" alt="" loading="lazy" width="256" height="256">Documentation</li><li><img src="Images/Pics/gen/translation.webp" alt="" loading="lazy" width="256" height="256">English–Arabic Translation</li><li><img src="Images/Pics/gen/transcription.webp" alt="" loading="lazy" width="256" height="256">Audio Transcription</li><li><img src="Images/Pics/gen/typing.webp" alt="" loading="lazy" width="256" height="256">Fast &amp; Accurate Typing</li></ul></div><div><h3>Sales and people</h3><ul class="skills"><li><img src="Images/Pics/real-estate-cold-caller.webp" alt="" loading="lazy" width="512" height="512">Real Estate Representative</li><li><img src="Images/Pics/tele.webp" alt="" loading="lazy" width="128" height="128">Telemarketing Representative</li><li><img src="Images/Pics/cold.webp" alt="" loading="lazy" width="512" height="512">Cold Calling</li><li><img src="Images/Pics/hr.webp" alt="" loading="lazy" width="512" height="512">HR Recruiter</li><li><img src="Images/Pics/voice.webp" alt="" loading="lazy" width="512" height="512">Voice Acting</li><li><img src="Images/Pics/gen/target.webp" alt="" loading="lazy" width="256" height="256">Lead Generation</li><li><img src="Images/Pics/gen/funnel.webp" alt="" loading="lazy" width="256" height="256">Lead Qualification</li><li><img src="Images/Pics/gen/objection.webp" alt="" loading="lazy" width="256" height="256">Objection Handling</li><li><img src="Images/Pics/gen/calendar.webp" alt="" loading="lazy" width="256" height="256">Appointment Setting</li><li><img src="Images/Pics/gen/handshake.webp" alt="" loading="lazy" width="256" height="256">Negotiation</li><li><img src="Images/Pics/gen/crm.webp" alt="" loading="lazy" width="256" height="256">CRM Systems</li><li><img src="Images/Pics/gen/communication.webp" alt="" loading="lazy" width="256" height="256">Communication</li><li><img src="Images/Pics/gen/listening.webp" alt="" loading="lazy" width="256" height="256">Active Listening</li><li><img src="Images/Pics/gen/puzzle.webp" alt="" loading="lazy" width="256" height="256">Problem Solving</li><li><img src="Images/Pics/gen/adapt.webp" alt="" loading="lazy" width="256" height="256">Adaptability</li><li><img src="Images/Pics/gen/time.webp" alt="" loading="lazy" width="256" height="256">Time Management</li><li><img src="Images/Pics/gen/team.webp" alt="" loading="lazy" width="256" height="256">Team Collaboration</li><li><img src="Images/Pics/gen/remote.webp" alt="" loading="lazy" width="256" height="256">Remote Work</li><li><img src="Images/Pics/gen/arabic.webp" alt="" loading="lazy" width="256" height="256">Arabic: Native</li><li><img src="Images/Pics/gen/english.webp" alt="" loading="lazy" width="256" height="256">English: Upper Intermediate (B2-C1)</li></ul></div></div>
 </section>
 <section id="services" class="services-sec reveal">
   <div class="tl"><span>[003] SERVICES</span><span>WHAT I OFFER</span></div>
@@ -121,7 +200,7 @@
       <p class="sub">Personal &amp; Peer Support</p>
       <ul class="bul"><li>Performed hands-on Windows installation, system configuration, driver installation, and basic system maintenance on personal computers.</li><li>Diagnosed and resolved common Windows and software-related issues through systematic troubleshooting and error analysis.</li><li>Used Windows Event Viewer, error messages, crash information, and system behavior to investigate and identify potential causes of technical issues.</li><li>Assisted colleagues and peers with common computer, Windows, software, hardware, and connectivity-related issues.</li><li>Performed basic network troubleshooting and investigated common connectivity, configuration, and system-related problems.</li><li>Researched unfamiliar technical issues independently and applied documented solutions to resolve problems and improve system reliability.</li><li>Used AI tools and technical documentation as research aids when troubleshooting unfamiliar issues, while validating solutions through practical testing.</li></ul>
     </div>
-    <div class="shot"><img src="Images/Exp/it.webp" alt="Illustration: IT support and troubleshooting" loading="lazy"></div>
+    <div class="shot"><img src="Images/Exp/it.webp" alt="Illustration: IT support and troubleshooting" loading="lazy" width="1400" height="788"></div>
   </div>
   <dl class="meta-row"><div><dt>Role</dt><dd>Hands-on IT Experience</dd></div><div><dt>Company</dt><dd>Personal &amp; Peer Support</dd></div></dl>
 </section>
@@ -133,7 +212,7 @@
       <p class="sub">Teleoceans &amp; Coldio · Full time · November 2025 – October 2026</p>
       <ul class="bul"><li>Make 400–500 outbound cold calls per day to homeowners and potential sellers, generating 10–20 qualified real estate leads per week.</li><li>Build rapport with prospects and handle objections professionally.</li><li>Qualify leads based on motivation, property condition, asking price, and timeline to sell.</li><li>Keep CRM records accurate, including call details, lead status, and client information.</li><li>Use active listening to identify client needs and opportunities.</li></ul>
     </div>
-    <div class="shot"><img src="Images/Exp/realestate.webp" alt="Illustration: Real estate cold calling and lead generation" loading="lazy"></div>
+    <div class="shot"><img src="Images/Exp/realestate.webp" alt="Illustration: Real estate cold calling and lead generation" loading="lazy" width="1400" height="788"></div>
   </div>
   <dl class="meta-row"><div><dt>Role</dt><dd>Real Estate Representative</dd></div><div><dt>Company</dt><dd>Teleoceans &amp; Coldio</dd></div><div><dt>Type</dt><dd>Full time</dd></div><div><dt>Period</dt><dd>November 2025 – October 2026</dd></div></dl>
 </section>
@@ -145,7 +224,7 @@
       <p class="sub">Mountains Solutions · Full time · June 2025 – November 2025</p>
       <ul class="bul"><li>Made 300–400 cold calls per day to homeowners and business owners, offering roof inspections and related services.</li><li>Presented service features clearly and persuasively, tailored to each customer’s needs.</li><li>Generated qualified leads and set 8–15 appointments per week, transferring warm prospects to the sales department for closing.</li><li>Built trust with property owners through professional, persuasive communication.</li><li>Kept up to date with service knowledge, company updates, and industry trends to keep messaging accurate.</li></ul>
     </div>
-    <div class="shot"><img src="Images/Exp/roofing.webp" alt="Illustration: Roofing telemarketing and appointment setting" loading="lazy"></div>
+    <div class="shot"><img src="Images/Exp/roofing.webp" alt="Illustration: Roofing telemarketing and appointment setting" loading="lazy" width="1400" height="788"></div>
   </div>
   <dl class="meta-row"><div><dt>Role</dt><dd>Telemarketing Representative (Roofing)</dd></div><div><dt>Company</dt><dd>Mountains Solutions</dd></div><div><dt>Type</dt><dd>Full time</dd></div><div><dt>Period</dt><dd>June 2025 – November 2025</dd></div></dl>
 </section>
@@ -157,7 +236,7 @@
       <p class="sub">Dragons Academe · Part time · November 2024 – February 2025</p>
       <ul class="bul"><li>Managed the recruitment process end to end: candidate sourcing, screening, and shortlisting.</li><li>Conducted phone and video interviews to assess qualifications, soft skills, and cultural fit.</li><li>Posted job ads across multiple platforms and managed applicant tracking systems (ATS).</li><li>Worked with team leads and hiring managers to define job requirements and hiring strategies.</li><li>Prepared and updated recruitment reports and performance metrics.</li><li>Supported a better candidate experience and the company’s employer brand.</li></ul>
     </div>
-    <div class="shot"><img src="Images/Exp/hr.webp" alt="Illustration: Recruitment" loading="lazy"></div>
+    <div class="shot"><img src="Images/Exp/hr.webp" alt="Illustration: Recruitment" loading="lazy" width="1400" height="787"></div>
   </div>
   <dl class="meta-row"><div><dt>Role</dt><dd>HR Recruiter</dd></div><div><dt>Company</dt><dd>Dragons Academe</dd></div><div><dt>Type</dt><dd>Part time</dd></div><div><dt>Period</dt><dd>November 2024 – February 2025</dd></div></dl>
 </section>
@@ -169,7 +248,7 @@
       <p class="sub">Personal Projects · Self-directed · August 2023 – Now</p>
       <ul class="bul"><li>Built personal web projects, including responsive e-commerce / online store interfaces, using HTML, CSS, and JavaScript.</li><li>Practiced turning ideas into functional pages with a focus on layout, usability, responsiveness, and basic interactivity.</li><li>Tested responsive design and cross-browser compatibility through hands-on projects.</li><li>Used AI-assisted development (Vibe Coding) to prototype ideas and speed up development.</li></ul>
     </div>
-    <div class="shot"><img src="Images/Exp/frontend.webp" alt="Illustration: Front-end web development" loading="lazy"></div>
+    <div class="shot"><img src="Images/Exp/frontend.webp" alt="Illustration: Front-end web development" loading="lazy" width="1400" height="788"></div>
   </div>
   <dl class="meta-row"><div><dt>Role</dt><dd>Frontend Development</dd></div><div><dt>Company</dt><dd>Personal Projects</dd></div><div><dt>Type</dt><dd>Self-directed</dd></div><div><dt>Period</dt><dd>August 2023 – Now</dd></div></dl>
 </section>
@@ -181,7 +260,7 @@
       <p class="sub">Remote · Part time · April 2024 – October 2024</p>
       <ul class="bul"><li>Contributed to a doctoral research project on the role of Information Technology in transitioning conventional banking to Islamic banking in Saudi Arabia.</li><li>Collected, organized, and analyzed qualitative and quantitative data.</li><li>Took part in brainstorming sessions to refine research methodology and data collection strategies.</li><li>Kept data entry, documentation, and reporting accurate and consistent.</li><li>Used Microsoft Office for documentation and data processing, and AI tools to streamline repetitive research tasks.</li></ul>
     </div>
-    <div class="shot"><img src="Images/Exp/research.webp" alt="Illustration: Academic research support" loading="lazy"></div>
+    <div class="shot"><img src="Images/Exp/research.webp" alt="Illustration: Academic research support" loading="lazy" width="1400" height="788"></div>
   </div>
   <dl class="meta-row"><div><dt>Role</dt><dd>Research Study Assistant</dd></div><div><dt>Company</dt><dd>Remote</dd></div><div><dt>Type</dt><dd>Part time</dd></div><div><dt>Period</dt><dd>April 2024 – October 2024</dd></div></dl>
 </section>
@@ -212,7 +291,7 @@
       <p class="p-desc">An interactive troubleshooting guide for IT support. Answer a few questions about the symptom and it walks you to the right fix, step by step, with commands ready to copy.</p><p class="p-key"><b>Key idea</b>Turns a vague symptom into the exact fix in a few clicks, so nobody has to guess where to start.</p><ul class="p-feat"><li>18 categories, from everyday problems to help desk pro work like Active Directory and Microsoft 365</li><li>666 decision points leading to 542 step-by-step solutions</li><li>Symptom search with a Ctrl+K shortcut</li><li>Copy-ready ticket templates, escalations and call scripts</li><li>Arabic and English, dark and light themes</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Fix-Path/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Fix-Path" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Fix-Path/" target="_blank" rel="noopener" aria-label="Open FixPath"><img src="Images/projects/FixPath.webp" alt="FixPath screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Fix-Path/" target="_blank" rel="noopener" aria-label="Open FixPath"><img src="Images/projects/FixPath.webp" alt="FixPath screenshot" loading="lazy" width="1600" height="800"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>FixPath: IT Troubleshooting Guide</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>01 / 22</dd></div></dl>
 </section>
@@ -224,7 +303,7 @@
       <p class="p-desc">A personal finance app in English and Arabic. Keep a shopping list with prices, tick off monthly bills, and log every expense.</p><p class="p-key"><b>Key idea</b>Replaces scattered notes with one place that shows where your money goes each month.</p><ul class="p-feat"><li>To Buy list with priorities (ASAP, Needed, Style) and a running total</li><li>Monthly Bills that reset automatically each month</li><li>Spending log with category breakdown and last 14 days chart</li><li>Editable sections, priorities and categories, with backup export</li><li>Arabic and English, dark and light themes</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Budget-Bills-SpendingTracker/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Budget-Bills-SpendingTracker" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Budget-Bills-SpendingTracker/" target="_blank" rel="noopener" aria-label="Open Mahfazty"><img src="Images/projects/Mahfazty-Budget.webp" alt="Mahfazty screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Budget-Bills-SpendingTracker/" target="_blank" rel="noopener" aria-label="Open Mahfazty"><img src="Images/projects/Mahfazty-Budget.webp" alt="Mahfazty screenshot" loading="lazy" width="1920" height="855"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Mahfazty: Budget, Bills &amp; Spending</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>02 / 22</dd></div></dl>
 </section>
@@ -236,7 +315,7 @@
       <p class="p-desc">A training app for help desk work, built as missions and labs. Learn by fixing broken PCs, Windows problems and network faults instead of only reading.</p><p class="p-key"><b>Key idea</b>Lets beginners practice real help desk situations in safe simulators instead of only reading theory.</p><ul class="p-feat"><li>Story campaign, Fix the PC, Windows Rescue, Network Detective and Help Desk tickets</li><li>Labs: Network Commands, Terminal Lab and Hardware Lab</li><li>Simulators: Windows Desktop, Office, PC Builder and Network Puzzle</li><li>Courses, flashcards, quizzes and an Interview Arena</li><li>XP levels, streaks, skill radar, and JSON progress export</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/IT-Learning/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/IT-Learning" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/IT-Learning/" target="_blank" rel="noopener" aria-label="Open IT Support Academy"><img src="Images/projects/IT-Support-Academy.webp" alt="IT Support Academy screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/IT-Learning/" target="_blank" rel="noopener" aria-label="Open IT Support Academy"><img src="Images/projects/IT-Support-Academy.webp" alt="IT Support Academy screenshot" loading="lazy" width="1920" height="855"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>IT Support Academy</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>03 / 22</dd></div></dl>
 </section>
@@ -248,7 +327,7 @@
       <p class="p-desc">A password generator and locker that runs fully in the browser. Strong passwords, passphrases and PINs with an honest strength meter, and nothing ever uploaded.</p><p class="p-key"><b>Key idea</b>Generates and stores strong passwords entirely in your browser, so nothing is ever uploaded.</p><ul class="p-feat"><li>Four modes: password, passphrase, pronounceable and PIN</li><li>Entropy score with a time-to-crack estimate and a plain-English reason</li><li>Rules for look-alikes, repeats, sequences and custom character sets</li><li>Bulk generate with copy all, plus a local locker with AES-256-GCM encryption and JSON export</li><li>Private by design: Web Crypto API, no server and no account; Arabic and English</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Key-Forge/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Key-Forge" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Key-Forge/" target="_blank" rel="noopener" aria-label="Open KeyForge"><img src="Images/projects/KeyForge.webp" alt="KeyForge screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Key-Forge/" target="_blank" rel="noopener" aria-label="Open KeyForge"><img src="Images/projects/KeyForge.webp" alt="KeyForge screenshot" loading="lazy" width="1600" height="800"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>KeyForge: Password Generator &amp; Locker</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>04 / 22</dd></div></dl>
 </section>
@@ -260,7 +339,7 @@
       <p class="p-desc">A workout and nutrition tracker in Arabic with an English switch. One place for the day's training, meals and weekly plan.</p><p class="p-key"><b>Key idea</b>Puts training, meals and the weekly plan in one daily dashboard instead of several apps.</p><ul class="p-feat"><li>Dashboard with calories, protein and workout volume</li><li>Workout of the day with Push, Pull, Legs and other splits</li><li>Weekly planner and your own exercise library</li><li>Meal logging against calorie and macro targets</li><li>Profile and JSON backup, saved on your device</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Plate/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Plate" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Plate/" target="_blank" rel="noopener" aria-label="Open Plate"><img src="Images/projects/Plate.webp" alt="Plate screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Plate/" target="_blank" rel="noopener" aria-label="Open Plate"><img src="Images/projects/Plate.webp" alt="Plate screenshot" loading="lazy" width="1600" height="715"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Plate: Workout &amp; Nutrition</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>05 / 22</dd></div></dl>
 </section>
@@ -272,7 +351,7 @@
       <p class="p-desc">An Arabic learning guide for beginner boxing at home, from wrapping your hands to full combos on the heavy bag.</p><p class="p-key"><b>Key idea</b>Gives complete beginners a clear step-by-step path to learn boxing at home.</p><ul class="p-feat"><li>Guided path: hand wraps, stance, warm-up, punches, defense, combos</li><li>80 exercises, 22 combos and 176 explainer videos</li><li>12-week plan, round timer, training log and checklist</li><li>Recovery section and a glossary</li><li>Arabic and English, dark and light</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/BOXING-01/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/BOXING-01" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/BOXING-01/" target="_blank" rel="noopener" aria-label="Open Boxing From Zero"><img src="Images/projects/Boxing-From-Zero.webp" alt="Boxing From Zero screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/BOXING-01/" target="_blank" rel="noopener" aria-label="Open Boxing From Zero"><img src="Images/projects/Boxing-From-Zero.webp" alt="Boxing From Zero screenshot" loading="lazy" width="1600" height="719"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Boxing From Zero<span class="ar-only"> (بوكسينج من الصفر)</span></dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>06 / 22</dd></div></dl>
 </section>
@@ -284,7 +363,7 @@
       <p class="p-desc">A booking management system for a clinic receptionist or booking manager, in Arabic and English. Staff book patients in five steps and manage every appointment from one dashboard.</p><p class="p-key"><b>Key idea</b>Gives the receptionist one dashboard to book patients in five steps and see every appointment.</p><ul class="p-feat"><li>Book a patient by specialty, doctor, visit type, day and time slot</li><li>Set prices and visit durations per service</li><li>Dashboard with all bookings, a 7-day chart and search</li><li>Manage services, team, colors, clients and data</li><li>Export bookings to CSV</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Clinicly/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Clinicly" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Clinicly/" target="_blank" rel="noopener" aria-label="Open Clinicly"><img src="Images/projects/Clinicly.webp" alt="Clinicly screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Clinicly/" target="_blank" rel="noopener" aria-label="Open Clinicly"><img src="Images/projects/Clinicly.webp" alt="Clinicly screenshot" loading="lazy" width="1600" height="715"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Clinicly<span class="ar-only"> (العيادة)</span></dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>07 / 22</dd></div></dl>
 </section>
@@ -296,7 +375,7 @@
       <p class="p-desc">A table booking manager for a cafe, in Arabic and English. The booking manager or server enters each reservation by session, party size and time, and runs every booking from an admin page.</p><p class="p-key"><b>Key idea</b>Gives the booking manager one admin page to take, track and confirm every table booking.</p><ul class="p-feat"><li>Log the session type: regular, work and study, birthday, business meeting</li><li>Record party size and seating area: indoor, terrace or quiet corner</li><li>Day and time slot picker with a calendar for later dates</li><li>Password-protected admin with a 7-day chart and search</li><li>Export bookings to CSV and send a confirmation to the guest</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/CafeBook/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/CafeBook" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/CafeBook/" target="_blank" rel="noopener" aria-label="Open CafeBook"><img src="Images/projects/CafeBook.webp" alt="CafeBook screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/CafeBook/" target="_blank" rel="noopener" aria-label="Open CafeBook"><img src="Images/projects/CafeBook.webp" alt="CafeBook screenshot" loading="lazy" width="1600" height="715"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>CafeBook<span class="ar-only"> (الكافيه)</span></dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>08 / 22</dd></div></dl>
 </section>
@@ -308,7 +387,7 @@
       <p class="p-desc">A full help desk ticket tracker. Dashboard, ticket list, Kanban board, reports, a knowledge base and canned replies in one place.</p><p class="p-key"><b>Key idea</b>Keeps every ticket visible with SLA countdowns, so nothing slips past its deadline unnoticed.</p><ul class="p-feat"><li>Dashboard with live queue stats, SLA breaches and charts by status, priority and category</li><li>Ticket list with search, filters, tags, assignees and SLA countdowns</li><li>Drag-and-drop board to move tickets between statuses</li><li>Reports on resolution time and team workload, with export and print</li><li>152 knowledge articles and 134 canned replies; Arabic and English, dark mode</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/DeskFlow/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/DeskFlow" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/DeskFlow/" target="_blank" rel="noopener" aria-label="Open DeskFlow"><img src="Images/projects/DeskFlow.webp" alt="DeskFlow screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/DeskFlow/" target="_blank" rel="noopener" aria-label="Open DeskFlow"><img src="Images/projects/DeskFlow.webp" alt="DeskFlow screenshot" loading="lazy" width="1600" height="800"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>DeskFlow: Help Desk Ticket Tracker</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>09 / 22</dd></div></dl>
 </section>
@@ -320,7 +399,7 @@
       <p class="p-desc">An IT support portal for employees. Report a problem in a minute and get a ticket number, a clear response time and quick fixes to try while you wait.</p><p class="p-key"><b>Key idea</b>Lets employees report a problem in a minute and try quick fixes while they wait for IT.</p><ul class="p-feat"><li>Three-step ticket form with categories, urgency levels and drag-and-drop attachments</li><li>Quick fixes and help articles that update as you type</li><li>My tickets with filters, search and a status timeline for every ticket</li><li>Help center with how-to articles, and notifications as tickets move</li><li>Arabic and English with full RTL, dark and light themes</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/ASK-IT/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/ASK-IT" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/ASK-IT/" target="_blank" rel="noopener" aria-label="Open AskIT"><img src="Images/projects/AskIT.webp" alt="AskIT screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/ASK-IT/" target="_blank" rel="noopener" aria-label="Open AskIT"><img src="Images/projects/AskIT.webp" alt="AskIT screenshot" loading="lazy" width="1600" height="800"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>AskIT: IT Support Portal</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>10 / 22</dd></div></dl>
 </section>
@@ -332,7 +411,7 @@
       <p class="p-desc">A personal start page that gathers the day in one place. The layout is made of widgets you can add, move and hide.</p><p class="p-key"><b>Key idea</b>Brings the day’s priorities, focus timer and quick notes into one customizable start page.</p><ul class="p-feat"><li>Today priorities, daily checklist and quick capture inbox</li><li>Focus timer with stopwatch and countdown</li><li>Quick access links to your own tools</li><li>Progress tracking and a weekly review</li><li>Mind &amp; Calm breathing exercises and brain-training games</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/HOMEBASE/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/HOMEBASE" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/HOMEBASE/" target="_blank" rel="noopener" aria-label="Open HomeBase"><img src="Images/projects/Homebase.webp" alt="HomeBase screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/HOMEBASE/" target="_blank" rel="noopener" aria-label="Open HomeBase"><img src="Images/projects/Homebase.webp" alt="HomeBase screenshot" loading="lazy" width="1920" height="855"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>HOMEBASE</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>11 / 22</dd></div></dl>
 </section>
@@ -344,7 +423,7 @@
       <p class="p-desc">A lightweight CRM for real estate leads, built around cold calling work. Track every lead, see the pipeline, and never miss a follow-up.</p><p class="p-key"><b>Key idea</b>Makes sure no lead is forgotten by sorting follow-ups by urgency and flagging the overdue ones.</p><ul class="p-feat"><li>Overview with monthly target, pipeline chart and leads per day</li><li>Leads list with status, property type and condition</li><li>Follow-ups sorted by soonest, with overdue days</li><li>Offer calculator that applies value multipliers to a house value</li><li>Editable dropdowns, targets and sample data</li><li>Saved in this browser only. Backup and Restore as JSON to move it to another browser or device, plus a CSV export of leads</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/RealEstateCRM/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/RealEstateCRM" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/RealEstateCRM/" target="_blank" rel="noopener" aria-label="Open Deal Desk"><img src="Images/projects/Deal-Desk-CRM.webp" alt="Deal Desk screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/RealEstateCRM/" target="_blank" rel="noopener" aria-label="Open Deal Desk"><img src="Images/projects/Deal-Desk-CRM.webp" alt="Deal Desk screenshot" loading="lazy" width="1920" height="855"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Deal Desk (Real Estate CRM)</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>12 / 22</dd></div></dl>
 </section>
@@ -356,7 +435,7 @@
       <p class="p-desc">One place for links, notes and to-dos, in Arabic with an English switch. Everything is saved in the browser.</p><p class="p-key"><b>Key idea</b>Keeps links, notes and to-dos in one searchable place instead of three different apps.</p><ul class="p-feat"><li>Three tabs: links, notes and to-dos</li><li>Link cards with a preview image and description</li><li>Categories, pinning and search</li><li>Due dates and reminders on tasks</li><li>Light and dark mode</li><li>Saved in this browser only. Export and Import as JSON to move it to another browser or device</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Notes-links-Saver/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Notes-links-Saver" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Notes-links-Saver/" target="_blank" rel="noopener" aria-label="Open Notes Hub"><img src="Images/projects/Notes-Hub.webp" alt="Notes Hub screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Notes-links-Saver/" target="_blank" rel="noopener" aria-label="Open Notes Hub"><img src="Images/projects/Notes-Hub.webp" alt="Notes Hub screenshot" loading="lazy" width="1600" height="731"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Notes Hub<span class="ar-only"> (مركز ملاحظاتي)</span></dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>13 / 22</dd></div></dl>
 </section>
@@ -368,7 +447,7 @@
       <p class="p-desc">A bookmark manager with a dark, modern dashboard. Save sites into collections and folders and find them fast.</p><p class="p-key"><b>Key idea</b>Turns a messy browser bookmark list into organized collections you can search instantly.</p><ul class="p-feat"><li>Add bookmarks with an icon, folder and collection</li><li>Import your browser bookmarks HTML file, or export</li><li>Favorites, recently added and sort A to Z</li><li>Search with Ctrl K</li><li>Light and dark mode</li><li>Saved in this browser only. Export or import a bookmarks HTML file to move your links (not a full backup of the app)</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/BookmarksManager/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/BookmarksManager" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/BookmarksManager/" target="_blank" rel="noopener" aria-label="Open Bookmarks Vault"><img src="Images/projects/Bookmarks-Vault.webp" alt="Bookmarks Vault screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/BookmarksManager/" target="_blank" rel="noopener" aria-label="Open Bookmarks Vault"><img src="Images/projects/Bookmarks-Vault.webp" alt="Bookmarks Vault screenshot" loading="lazy" width="1920" height="855"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Zeyad's Vault: Bookmarks Manager</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>14 / 22</dd></div></dl>
 </section>
@@ -380,7 +459,7 @@
       <p class="p-desc">A mobile-first Arabic app for the daily Islamic routine. It shows prayer times for your city and tracks what you do each day.</p><p class="p-key"><b>Key idea</b>Keeps prayer times, daily wird and habit tracking in one lightweight Arabic app.</p><ul class="p-feat"><li>Prayer times for Egyptian cities and Makkah, with a countdown to the next prayer</li><li>Prayer tracking, sunnah prayers and fasting</li><li>Quran daily wird, adhkar, and a tasbih counter</li><li>Hadith section and notes</li><li>Activity history with streaks, themes and dark mode</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Noor/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Noor" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Noor/" target="_blank" rel="noopener" aria-label="Open Noor"><img src="Images/projects/Noor.webp" alt="Noor screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Noor/" target="_blank" rel="noopener" aria-label="Open Noor"><img src="Images/projects/Noor.webp" alt="Noor screenshot" loading="lazy" width="1920" height="855"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Noor: Daily Muslim Companion</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>15 / 22</dd></div></dl>
 </section>
@@ -392,7 +471,7 @@
       <p class="p-desc">A calorie and macro tracker. Pick foods from a searchable database, log what you eat, and see your day as a macro split. A built-in calculator estimates daily needs.</p><p class="p-key"><b>Key idea</b>Takes the guesswork out of eating by showing calories and macros against a target calculated for you.</p><ul class="p-feat"><li>Food database with category filters and search</li><li>Daily log with calories, protein, carbs and fat</li><li>BMR, TDEE and BMI from age, weight, height and activity</li><li>Calorie targets for cut, maintain or bulk, plus protein advice</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Nutritrack/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Nutritrack" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Nutritrack/" target="_blank" rel="noopener" aria-label="Open NutriTrack"><img src="Images/projects/NutriTrack.webp" alt="NutriTrack screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Nutritrack/" target="_blank" rel="noopener" aria-label="Open NutriTrack"><img src="Images/projects/NutriTrack.webp" alt="NutriTrack screenshot" loading="lazy" width="1917" height="862"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>NutriTrack</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>16 / 22</dd></div></dl>
 </section>
@@ -404,7 +483,7 @@
       <p class="p-desc">Flappy Bird Deluxe: a canvas game with unlockable bird skins, power-ups and three difficulty levels.</p><p class="p-key"><b>Key idea</b>Adds coins, skins and power-ups to the classic formula to give it real replay value.</p><ul class="p-feat"><li>Earn coins to unlock new bird skins</li><li>Shield, slow-mo and double-points power-ups</li><li>Easy, Normal and Hard modes with best score and achievements</li><li>Arabic and English, sound toggle, fullscreen and keyboard controls</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/FlappyBird/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/FlappyBird" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/FlappyBird/" target="_blank" rel="noopener" aria-label="Open Flappy Bird"><img src="Images/projects/flappyBird.webp" alt="Flappy Bird screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/FlappyBird/" target="_blank" rel="noopener" aria-label="Open Flappy Bird"><img src="Images/projects/flappyBird.webp" alt="Flappy Bird screenshot" loading="lazy" width="1600" height="715"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Flappy Bird</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>17 / 22</dd></div></dl>
 </section>
@@ -416,7 +495,7 @@
       <p class="p-desc">A scientific calculator with extra tools in tabs, in three color themes.</p><p class="p-key"><b>Key idea</b>Packs scientific math, conversions, dates and graphing into one tool, so you never switch apps.</p><ul class="p-feat"><li>Calc, Convert, Money, Dates, Hex and Graph tabs</li><li>Scientific functions, DEG/RAD and memory keys</li><li>History panel and keyboard support</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Calculator/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Calculator" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Calculator/" target="_blank" rel="noopener" aria-label="Open Advanced Calculator"><img src="Images/projects/Calculator.webp" alt="Advanced Calculator screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Calculator/" target="_blank" rel="noopener" aria-label="Open Advanced Calculator"><img src="Images/projects/Calculator.webp" alt="Advanced Calculator screenshot" loading="lazy" width="1600" height="800"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Advanced Calculator</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>18 / 22</dd></div></dl>
 </section>
@@ -428,7 +507,7 @@
       <p class="p-desc">Weather for your location or any city you search, using Open-Meteo data with no API key.</p><p class="p-key"><b>Key idea</b>Gives a clear forecast for your location in seconds, with no sign-up and no API key.</p><ul class="p-feat"><li>Current conditions, feels-like, wind, humidity, pressure and UV</li><li>24-hour strip and 7-day forecast</li><li>City search, locate button and recent cities</li><li>Celsius/Fahrenheit toggle and Arabic support</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Weather-App/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Weather-App" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Weather-App/" target="_blank" rel="noopener" aria-label="Open Weather App"><img src="Images/projects/WeatherApp.webp" alt="Weather App screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Weather-App/" target="_blank" rel="noopener" aria-label="Open Weather App"><img src="Images/projects/WeatherApp.webp" alt="Weather App screenshot" loading="lazy" width="1911" height="861"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Weather App</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>19 / 22</dd></div></dl>
 </section>
@@ -440,7 +519,7 @@
       <p class="p-desc">Game Night: Tic Tac Toe for two players or against the computer.</p><p class="p-key"><b>Key idea</b>Includes an “Impossible” mode where the computer never loses.</p><ul class="p-feat"><li>Easy, Medium and Impossible computer levels</li><li>Scoreboard, undo and new round</li><li>Arabic and English, sound and theme toggles</li><li>Keys 1 to 9 and remembered settings</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Tic-tac-toe-2-players/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Tic-tac-toe-2-players" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Tic-tac-toe-2-players/" target="_blank" rel="noopener" aria-label="Open Tic Tac Toe"><img src="Images/projects/Tictactoe.webp" alt="Tic Tac Toe screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Tic-tac-toe-2-players/" target="_blank" rel="noopener" aria-label="Open Tic Tac Toe"><img src="Images/projects/Tictactoe.webp" alt="Tic Tac Toe screenshot" loading="lazy" width="1600" height="715"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Tic Tac Toe</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>20 / 22</dd></div></dl>
 </section>
@@ -452,7 +531,7 @@
       <p class="p-desc">A hand-picked directory of 363 useful websites in 14 categories, from learning and AI tools to coding, cooking and sport. Find the right site fast with search or a category.</p><p class="p-key"><b>Key idea</b>Saves the search for the right tool by collecting 363 hand-picked sites into one searchable directory.</p><ul class="p-feat"><li>363 sites with logos and short descriptions, in 14 categories</li><li>Instant search, with the / key as a shortcut</li><li>Category picker to filter the list</li><li>Light and dark theme that remembers your choice</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/WebPedia/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/WebPedia" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/WebPedia/" target="_blank" rel="noopener" aria-label="Open WebPedia"><img src="Images/projects/WebPedia.webp" alt="WebPedia screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/WebPedia/" target="_blank" rel="noopener" aria-label="Open WebPedia"><img src="Images/projects/WebPedia.webp" alt="WebPedia screenshot" loading="lazy" width="1600" height="800"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>WebPedia</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>21 / 22</dd></div></dl>
 </section>
@@ -464,7 +543,7 @@
       <p class="p-desc">Converts between world currencies using daily indicative rates from ExchangeRate-API.</p><p class="p-key"><b>Key idea</b>Converts between world currencies instantly with daily rates, and remembers your last pair.</p><ul class="p-feat"><li>Searchable currency picker with a Most used list, in English and Arabic</li><li>Inverse rate, copy result and popular-conversion chips</li><li>Remembers your last pair, with a rates ticker and update time</li></ul>
       <div class="p-actions"><a class="open" href="https://zeyad-220.github.io/Exchange-Rate-Converter/" target="_blank" rel="noopener">View live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="open gh" href="https://github.com/zeyad-220/Exchange-Rate-Converter" target="_blank" rel="noopener" aria-label="Open the source code on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code</a></div>
     </div>
-    <a class="shot" href="https://zeyad-220.github.io/Exchange-Rate-Converter/" target="_blank" rel="noopener" aria-label="Open Exchange Rate Converter"><img src="Images/projects/Exchange Rate Converter.webp" alt="Exchange Rate Converter screenshot" loading="lazy"></a>
+    <a class="shot" href="https://zeyad-220.github.io/Exchange-Rate-Converter/" target="_blank" rel="noopener" aria-label="Open Exchange Rate Converter"><img src="Images/projects/Exchange Rate Converter.webp" alt="Exchange Rate Converter screenshot" loading="lazy" width="1600" height="800"></a>
   </div>
   <dl class="meta-row"><div><dt>Project</dt><dd>Exchange Rate Converter</dd></div><div><dt>Live demo</dt><dd>zeyad-220.github.io</dd></div><div><dt>Section</dt><dd>Projects</dd></div><div><dt>Index</dt><dd>22 / 22</dd></div></dl>
 </section>
@@ -494,26 +573,26 @@
     <button type="button" class="chip" data-f="Simplilearn" aria-pressed="false">Simplilearn</button>
   </div>
   <ul class="grid certs" id="certs">
-    <li data-i="Simplilearn"><button type="button"><img src="Images/Certificates/Simplilearn Business Administration.webp" alt="" loading="lazy"><span class="meta"><strong>Introduction to Business Administration</strong><small>Simplilearn</small></span></button><a class="cv" href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1NTEyIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvMTEwODMwMThfMTA3MTM4MjZfMTc5NTY3NzE3Mjc1NS5wbmciLCJ1c2VybmFtZSI6IlpleWFkIEdhYmVyIn0%3D&amp;referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F8555%2FIntroduction-to-Business-Administration%2Fcertificate%2Fdownload-skillup&amp;%24web_only=true" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Google"><button type="button"><img src="Images/Certificates/Google Generative AI.webp" alt="" loading="lazy"><span class="meta"><strong>Introduction to Generative AI</strong><small>Google Cloud</small></span></button><a class="cv" href="https://www.skills.google/public_profiles/d14e4bc6-e854-417b-84da-097ff5709e1f/badges/28710048" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="FreeAcademy"><button type="button"><img src="Images/Certificates/Prompt Engineering.webp" alt="" loading="lazy"><span class="meta"><strong>Prompt Engineering in 30 Minutes</strong><small>FreeAcademy.ai</small></span></button><a class="cv" href="https://freeacademy.ai/verify/FA-2026-MPE-96857X" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/Ai for b.webp" alt="" loading="lazy"><span class="meta"><strong>AI for Business Professionals</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/422732c7-69ac-44b2-b41c-a6f0749d67b4" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="EF"><button type="button"><img src="Images/Certificates/EF.webp" alt="" loading="lazy"><span class="meta"><strong>EF SET, C1 Advanced English</strong><small>EF</small></span></button><a class="cv" href="https://cert.efset.org/CpK8F9" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/IoT Digital Transformation.webp" alt="" loading="lazy"><span class="meta"><strong>Introduction to IoT and Digital Transformation</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=ea80607a-13c9-49a2-a45e-33b1b7e044b4" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="LinkedIn"><button type="button"><img src="Images/Certificates/Cybersecurity Threat Landscape.webp" alt="" loading="lazy"><span class="meta"><strong>Cybersecurity Threat Landscape</strong><small>LinkedIn</small></span></button><a class="cv" href="https://www.linkedin.com/learning/certificates/9aeb7800a5eb699bad28464fb988fda8acc1b7824a3dac4ccb6095a08c045663" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/Modern Ai.webp" alt="" loading="lazy"><span class="meta"><strong>Modern AI</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=77aa0d63-b3c6-46eb-b037-610485a7989d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/IT.webp" alt="" loading="lazy"><span class="meta"><strong>IT for Business Success</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/d112aca1-6e9b-47a9-afc4-4bf0e71ee27d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/Business Communications.webp" alt="" loading="lazy"><span class="meta"><strong>Business Communications</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/3de75587-1bf8-421d-a55a-9776894db2b0" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/Resume Writing.webp" alt="" loading="lazy"><span class="meta"><strong>Resume Writing and Job Interviewing</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/682593ea-c7fe-43d8-97e7-a81ba82dc94a" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/AI.webp" alt="" loading="lazy"><span class="meta"><strong>AI for Beginners</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/70fdd562-3fc1-4dee-8002-e4fe74e8f24b" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/Social Media Marketing.webp" alt="" loading="lazy"><span class="meta"><strong>Social Media Marketing</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/203f48d9-c3a5-4ab8-b804-60bf6e5ce59c" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/DATA SCIENCE.webp" alt="" loading="lazy"><span class="meta"><strong>Data Science</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/3916fd14-c7c8-491b-9040-083ba00ee47d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="HP"><button type="button"><img src="Images/Certificates/Effective Leadership.webp" alt="" loading="lazy"><span class="meta"><strong>Effective Leadership</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/31ee8fa1-364c-4d18-b605-9abcf3ca1405" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/HARDWARE.webp" alt="" loading="lazy"><span class="meta"><strong>Computer Hardware Basics</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=7062a5d7-dfe4-4f3f-acc8-6b5fc20e0400" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/JS.webp" alt="" loading="lazy"><span class="meta"><strong>JavaScript</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=1602c823-b33e-49fa-ae3c-2712fa62184d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/IOT.webp" alt="" loading="lazy"><span class="meta"><strong>Introduction to IoT</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=160d6b44-851e-45e3-bde8-1f2fb95dbe02" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Intrast"><button type="button"><img src="Images/Certificates/JAVA SE.webp" alt="" loading="lazy"><span class="meta"><strong>Java SE: Programming I</strong><small>Intrast</small></span></button><a class="cv" href="https://skillsdynamix.space/files/960412012023191452341808OArFSuwznQnr2X7hBEtak4qaX/show" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
-    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/CYBERSECURITY.webp" alt="" loading="lazy"><span class="meta"><strong>Introduction to Cybersecurity</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=e2528acf-fe31-40a7-86ec-9453c54b6f94" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Simplilearn"><button type="button"><img src="Images/Certificates/Simplilearn Business Administration.webp" alt="" loading="lazy" width="921" height="630"><span class="meta"><strong>Introduction to Business Administration</strong><small>Simplilearn</small></span></button><a class="cv" href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1NTEyIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvMTEwODMwMThfMTA3MTM4MjZfMTc5NTY3NzE3Mjc1NS5wbmciLCJ1c2VybmFtZSI6IlpleWFkIEdhYmVyIn0%3D&amp;referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F8555%2FIntroduction-to-Business-Administration%2Fcertificate%2Fdownload-skillup&amp;%24web_only=true" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Google"><button type="button"><img src="Images/Certificates/Google Generative AI.webp" alt="" loading="lazy" width="782" height="727"><span class="meta"><strong>Introduction to Generative AI</strong><small>Google Cloud</small></span></button><a class="cv" href="https://www.skills.google/public_profiles/d14e4bc6-e854-417b-84da-097ff5709e1f/badges/28710048" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="FreeAcademy"><button type="button"><img src="Images/Certificates/Prompt Engineering.webp" alt="" loading="lazy" width="872" height="612"><span class="meta"><strong>Prompt Engineering in 30 Minutes</strong><small>FreeAcademy.ai</small></span></button><a class="cv" href="https://freeacademy.ai/verify/FA-2026-MPE-96857X" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/Ai for b.webp" alt="" loading="lazy" width="1046" height="737"><span class="meta"><strong>AI for Business Professionals</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/422732c7-69ac-44b2-b41c-a6f0749d67b4" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="EF"><button type="button"><img src="Images/Certificates/EF.webp" alt="" loading="lazy" width="1242" height="1221"><span class="meta"><strong>EF SET, C1 Advanced English</strong><small>EF</small></span></button><a class="cv" href="https://cert.efset.org/CpK8F9" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/IoT Digital Transformation.webp" alt="" loading="lazy" width="761" height="512"><span class="meta"><strong>Introduction to IoT and Digital Transformation</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=ea80607a-13c9-49a2-a45e-33b1b7e044b4" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="LinkedIn"><button type="button"><img src="Images/Certificates/Cybersecurity Threat Landscape.webp" alt="" loading="lazy" width="1045" height="805"><span class="meta"><strong>Cybersecurity Threat Landscape</strong><small>LinkedIn</small></span></button><a class="cv" href="https://www.linkedin.com/learning/certificates/9aeb7800a5eb699bad28464fb988fda8acc1b7824a3dac4ccb6095a08c045663" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/Modern Ai.webp" alt="" loading="lazy" width="1190" height="805"><span class="meta"><strong>Modern AI</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=77aa0d63-b3c6-46eb-b037-610485a7989d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/IT.webp" alt="" loading="lazy" width="1140" height="805"><span class="meta"><strong>IT for Business Success</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/d112aca1-6e9b-47a9-afc4-4bf0e71ee27d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/Business Communications.webp" alt="" loading="lazy" width="1045" height="732"><span class="meta"><strong>Business Communications</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/3de75587-1bf8-421d-a55a-9776894db2b0" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/Resume Writing.webp" alt="" loading="lazy" width="1047" height="735"><span class="meta"><strong>Resume Writing and Job Interviewing</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/682593ea-c7fe-43d8-97e7-a81ba82dc94a" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/AI.webp" alt="" loading="lazy" width="1140" height="805"><span class="meta"><strong>AI for Beginners</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/70fdd562-3fc1-4dee-8002-e4fe74e8f24b" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/Social Media Marketing.webp" alt="" loading="lazy" width="1047" height="732"><span class="meta"><strong>Social Media Marketing</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/203f48d9-c3a5-4ab8-b804-60bf6e5ce59c" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/DATA SCIENCE.webp" alt="" loading="lazy" width="1140" height="805"><span class="meta"><strong>Data Science</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/3916fd14-c7c8-491b-9040-083ba00ee47d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="HP"><button type="button"><img src="Images/Certificates/Effective Leadership.webp" alt="" loading="lazy" width="1140" height="805"><span class="meta"><strong>Effective Leadership</strong><small>HP</small></span></button><a class="cv" href="https://www.life-global.org/certificate/31ee8fa1-364c-4d18-b605-9abcf3ca1405" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/HARDWARE.webp" alt="" loading="lazy" width="1045" height="805"><span class="meta"><strong>Computer Hardware Basics</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=7062a5d7-dfe4-4f3f-acc8-6b5fc20e0400" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/JS.webp" alt="" loading="lazy" width="1190" height="805"><span class="meta"><strong>JavaScript</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=1602c823-b33e-49fa-ae3c-2712fa62184d" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/IOT.webp" alt="" loading="lazy" width="1190" height="805"><span class="meta"><strong>Introduction to IoT</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=160d6b44-851e-45e3-bde8-1f2fb95dbe02" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Intrast"><button type="button"><img src="Images/Certificates/JAVA SE.webp" alt="" loading="lazy" width="1140" height="805"><span class="meta"><strong>Java SE: Programming I</strong><small>Intrast</small></span></button><a class="cv" href="https://skillsdynamix.space/files/960412012023191452341808OArFSuwznQnr2X7hBEtak4qaX/show" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
+    <li data-i="Cisco"><button type="button"><img src="Images/Certificates/CYBERSECURITY.webp" alt="" loading="lazy" width="1190" height="805"><span class="meta"><strong>Introduction to Cybersecurity</strong><small>Cisco</small></span></button><a class="cv" href="https://www.netacad.com/certificates?issuanceId=e2528acf-fe31-40a7-86ec-9453c54b6f94" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify credential</a></li>
   </ul>
 </section>
 <section id="contact" class="contact-sec reveal">
@@ -525,6 +604,7 @@
     <li><a href="https://wa.me/201061542681" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span><small>WhatsApp</small><strong dir="ltr">+20 106 154 2681</strong></span><i class="fas fa-arrow-up-right-from-square go" aria-hidden="true"></i></a></li>
     <li><a href="https://www.linkedin.com/in/zeyad-gaber-it/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span><small>LinkedIn</small><strong>zeyad-gaber-it</strong></span><i class="fas fa-arrow-up-right-from-square go" aria-hidden="true"></i></a></li>
   </ul>
+  <p class="vcard-row"><button id="vcard" class="btn" type="button"><i class="fas fa-address-book" aria-hidden="true"></i> Save contact</button></p>
 </section>
 <section class="thanks">
   <div class="tl"><span>[008] CLOSING</span><span>THANK YOU</span></div>
@@ -542,12 +622,20 @@
 </section>
 </main>
 <footer><p>© <span id="year">2026</span> Zeyad Gaber. All rights reserved.</p><a href="#home">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a></footer>
+<button id="totop" class="totop" type="button" aria-label="Back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="trk" cx="24" cy="24" r="21"/><circle class="prg" cx="24" cy="24" r="21"/></svg><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 <a id="hire" class="hire" href="#contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Hire me</a>
 <dialog id="lightbox" aria-label="Certificate preview">
   <button type="button" class="icon-btn close" aria-label="Close preview"><i class="fas fa-xmark" aria-hidden="true"></i></button>
   <img id="lb-img" alt=""><p id="lb-cap"></p>
 </dialog>
-<script src="lang-ar.js"></script>
+<dialog id="palette" class="palette" aria-label="Search the portfolio">
+  <div class="pal-box">
+    <div class="pal-head"><i class="fas fa-magnifying-glass" aria-hidden="true"></i><input id="pal-q" type="text" role="combobox" aria-expanded="true" aria-controls="pal-list" aria-autocomplete="list" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go"><kbd>Esc</kbd></div>
+    <ul id="pal-list" class="pal-list" role="listbox"></ul>
+    <div id="pal-foot" class="pal-foot" aria-hidden="true"></div>
+  </div>
+</dialog>
 <script src="script.js"></script>
 </body>
 </html>

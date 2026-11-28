@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zeyad-220.github.io/MyPortfolio/sitemap.xml

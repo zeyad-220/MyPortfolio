@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>404 – Page not found · Zeyad Gaber</title>
+<link rel="icon" href="https://zeyad-220.github.io/MyPortfolio/dark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Cairo:wght@400;600;800&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;if(localStorage.getItem('lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
+<style>
+:root{--bg:#050505;--surface:#101012;--line:#26262b;--text:#f2f2f3;--mute:#9a9aa3;--accent:#c9503f;--accent-text:#e9806f;--mono:'JetBrains Mono',ui-monospace,monospace;--disp:'Archivo',Impact,'Arial Narrow',sans-serif;--font:'Poppins',system-ui,sans-serif;--ease:cubic-bezier(.22,.75,.2,1);--spring:cubic-bezier(.34,1.56,.64,1);--sh:0 .4rem .8rem rgba(0,0,0,.22),0 1.6rem 3rem -1rem rgba(0,0,0,.6)}
+:root[data-theme="light"]{--bg:#f1f0ee;--surface:#fff;--line:#d9d8d4;--text:#111;--mute:#5a5a62;--accent:#a63d3d;--accent-text:#a63d3d;--sh:0 .3rem .7rem rgba(20,20,30,.1),0 1.5rem 2.8rem -1rem rgba(20,20,30,.3)}
+:root[lang="ar"]{--font:'Cairo','Poppins',system-ui,sans-serif;--mono:'Cairo',ui-monospace,sans-serif;--disp:'Cairo','Archivo',Impact,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:dark}html[data-theme="light"]{color-scheme:light}
+body{margin:0;min-height:100svh;display:grid;place-items:center;padding:2rem 1.25rem;background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--font);overflow:hidden;position:relative;isolation:isolate}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:25% 100%,100% 25%;opacity:.18}
+body::after{content:"";position:fixed;z-index:-1;left:50%;top:45%;width:90vmax;height:90vmax;margin:-45vmax 0 0 -45vmax;background:radial-gradient(closest-side at 35% 35%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%),radial-gradient(closest-side at 68% 64%,hsl(215 85% 55%/.15),transparent 70%);animation:aurora 20s ease-in-out infinite alternate}
+@keyframes aurora{0%{transform:translate3d(-3%,-2%,0) rotate(0)}100%{transform:translate3d(3%,3%,0) rotate(16deg) scale(1.08)}}
+main{text-align:center;max-width:36rem;width:100%}
+.logo{height:2.4rem;margin:0 auto 1.5rem;animation:up .8s var(--ease) both}
+.light{display:none}[data-theme="light"] .light{display:block}[data-theme="light"] .dark{display:none}
+.code{font:900 clamp(7rem,28vw,15rem)/.85 var(--disp);font-stretch:62%;letter-spacing:-.02em;margin:0;background:linear-gradient(180deg,var(--text) 25%,color-mix(in srgb,var(--accent) 80%,var(--text)));-webkit-background-clip:text;background-clip:text;color:transparent;animation:up 1s .1s var(--ease) both,bob 6s 1.2s ease-in-out infinite;filter:drop-shadow(0 1.4rem 2rem color-mix(in srgb,var(--accent) 45%,transparent))}
+@keyframes bob{50%{transform:translateY(-.6rem)}}
+@keyframes up{from{opacity:0;transform:translateY(1.5rem)}}
+.tag{font:500 .7rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--accent-text);margin:1.6rem 0 .6rem;animation:up .8s .25s var(--ease) both}
+h1{font:700 clamp(1.5rem,4.5vw,2.2rem)/1.25 var(--font);margin:0 0 .6rem;animation:up .8s .32s var(--ease) both}
+p{color:var(--mute);margin:0 0 2rem;animation:up .8s .4s var(--ease) both}
+:root[lang="ar"] .tag{letter-spacing:0;text-transform:none;font-size:.9rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;border-radius:2rem;background:var(--text);color:var(--bg);text-decoration:none;font:500 .74rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;box-shadow:var(--sh);transition:transform .3s var(--ease),background .2s,box-shadow .3s;animation:up .8s .48s var(--ease) both}
+:root[lang="ar"] .btn{letter-spacing:0;text-transform:none;font-size:.95rem}
+.btn:hover{background:var(--accent);color:#fff;transform:translateY(-3px);box-shadow:var(--sh),0 0 0 .4rem color-mix(in srgb,var(--accent) 25%,transparent)}
+.btn:active{transform:scale(.97)}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:1.8rem 0 0;padding:0;list-style:none;animation:up .8s .56s var(--ease) both}
+.links a{display:block;padding:.55rem 1.1rem;border:1px solid var(--line);border-radius:2rem;background:var(--surface);color:var(--mute);text-decoration:none;font-size:.9rem;box-shadow:var(--sh);transition:color .2s,border-color .2s,transform .3s var(--ease)}
+.links a:hover{color:var(--text);border-color:var(--accent);transform:translateY(-2px)}
+:focus-visible{outline:3px solid var(--accent-text);outline-offset:3px;border-radius:6px}
+[lang="en"] .ar-t,[lang="ar"] .en-t{display:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <a href="https://zeyad-220.github.io/MyPortfolio/" aria-label="Zeyad Gaber"><img class="logo dark" src="https://zeyad-220.github.io/MyPortfolio/dark.png" alt=""><img class="logo light" src="https://zeyad-220.github.io/MyPortfolio/light.png" alt=""></a>
+  <div class="code" aria-hidden="true">404</div>
+  <div class="tag"><span class="en-t">Page not found</span><span class="ar-t">الصفحة غير موجودة</span></div>
+  <h1><span class="en-t">This page took a wrong turn.</span><span class="ar-t">يبدو أنك وصلت إلى صفحة غير موجودة.</span></h1>
+  <p><span class="en-t">The link may be broken or the page may have moved. Head back and pick up where you left off.</span><span class="ar-t">قد يكون الرابط غير صحيح أو أن الصفحة نُقلت. ارجع إلى الموقع وأكمل من حيث توقفت.</span></p>
+  <a class="btn" href="https://zeyad-220.github.io/MyPortfolio/"><span class="en-t">Back to home</span><span class="ar-t">العودة للرئيسية</span></a>
+  <ul class="links">
+    <li><a href="https://zeyad-220.github.io/MyPortfolio/#skills"><span class="en-t">Skills</span><span class="ar-t">المهارات</span></a></li>
+    <li><a href="https://zeyad-220.github.io/MyPortfolio/#projects"><span class="en-t">Projects</span><span class="ar-t">المشاريع</span></a></li>
+    <li><a href="https://zeyad-220.github.io/MyPortfolio/#certificates"><span class="en-t">Certificates</span><span class="ar-t">الشهادات</span></a></li>
+    <li><a href="https://zeyad-220.github.io/MyPortfolio/#contact"><span class="en-t">Contact</span><span class="ar-t">تواصل</span></a></li>
+  </ul>
+</main>
+</body>
+</html>

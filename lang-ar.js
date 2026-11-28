@@ -370,9 +370,10 @@ window.AR_DICT={
 "Thank you": "شكراً لك",
 "Zeyad Gaber. All rights reserved.": "زياد جابر. جميع الحقوق محفوظة.",
 "Back to top": "العودة للأعلى",
-"Hire me": "وظّفني"
+"Hire me": "وظّفني",
+"Save contact": "احفظ جهة الاتصال"
 };
-window.AR_ATTR={"Previous project": "المشروع السابق", "Next project": "المشروع التالي", "Pause slideshow": "إيقاف العرض التلقائي", "Play slideshow": "تشغيل العرض التلقائي", "Filter projects by category": "تصفية المشاريع حسب الفئة", "Projects carousel": "عرض المشاريع", "Open the source code on GitHub": "فتح الكود المصدري على GitHub", "Switch between dark and light theme": "التبديل بين الوضع الداكن والفاتح", "Open menu": "فتح القائمة", "Close preview": "إغلاق المعاينة", "Certificate preview": "معاينة الشهادة", "Zeyad Gaber, back to top": "زياد جابر، العودة للأعلى"};
+window.AR_ATTR={"Previous project": "المشروع السابق", "Next project": "المشروع التالي", "Pause slideshow": "إيقاف العرض التلقائي", "Play slideshow": "تشغيل العرض التلقائي", "Filter projects by category": "تصفية المشاريع حسب الفئة", "Projects carousel": "عرض المشاريع", "Open the source code on GitHub": "فتح الكود المصدري على GitHub", "Switch between dark and light theme": "التبديل بين الوضع الداكن والفاتح", "Open menu": "فتح القائمة", "Close preview": "إغلاق المعاينة", "Certificate preview": "معاينة الشهادة", "Zeyad Gaber, back to top": "زياد جابر، العودة للأعلى", "Back to top": "العودة للأعلى", "Search the portfolio": "ابحث في الموقع"};
 window.AR_WORDS=["فني ⁦IT⁩", "مطور ويب ⁦Front-End⁩", "⁦Cold Caller⁩ عقارات", "مسؤول توظيف", "طالب نظم معلومات", "ممثل صوتي"];
 window.AR_TITLE="زياد جابر – فني ⁦IT⁩ · مطوّر واجهات أمامية · ⁦Cold Caller⁩ عقارات";
 window.AR_DESC="الموقع الشخصي لزياد جابر: فني ⁦IT⁩ ومطوّر واجهات أمامية وCold Caller عقارات من مصر. 22 مشروعاً حياً وخبرة عملية في الدعم الفني و20 شهادة.";
