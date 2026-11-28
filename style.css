@@ -301,7 +301,7 @@ dialog{overflow:visible}.close{top:.6rem;right:.6rem;z-index:2;background:rgba(0
 .contact-list .go{font-size:.8rem;color:var(--mute)}
 .hire{position:fixed;right:var(--pad);bottom:1.25rem;z-index:25;display:inline-flex;align-items:center;gap:.6rem;background:var(--accent);color:var(--on-accent);font:500 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:1rem 1.4rem;border-radius:2rem;box-shadow:0 .8rem 2rem -.6rem rgba(0,0,0,.6);transition:transform .2s,opacity .25s,visibility .25s}
 .hire:hover{transform:translateY(-2px)}
-.hire.hide{opacity:0;visibility:hidden;pointer-events:none}
+.hire.hide,.hire.away{opacity:0;visibility:hidden;pointer-events:none}
 @media (max-width:995px){.contact-sec{padding-bottom:8rem}}
 
 /* Compact contact + closing, side-by-side contact cards, project key idea */
@@ -384,3 +384,87 @@ a.cv:hover{border-color:var(--accent);background:var(--accent);color:var(--on-ac
 .certs li:hover>button{transform:none}
 .certs li>a.cv{display:flex;width:100%;height:auto;padding:.7rem 1rem;text-align:center;border-radius:0 0 1rem 1rem;transform:none}
 .certs li>a.cv:hover{transform:none;border-color:var(--accent);background:var(--accent);color:var(--on-accent)}
+
+/* ===== v37: projects slider with category filters ===== */
+.pcontrols{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.9rem 1.2rem;margin:.3rem 0 0;width:100%}
+.pfilters{display:flex;flex-wrap:wrap;gap:.55rem;min-width:0;flex:1 1 18rem}
+.pfchip{display:inline-flex;align-items:center;gap:.55rem;padding:.62rem 1.05rem;border:1px solid var(--line);border-radius:2rem;background:var(--surface);color:var(--mute);font:500 .92rem/1.2 var(--font);transition:transform .25s cubic-bezier(.2,.7,.2,1),border-color .2s,color .2s,background .2s}
+.pfchip b{font:500 .68rem/1 var(--mono);letter-spacing:.08em;color:var(--accent-text)}
+.pfchip:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--text)}
+.pfchip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.pfchip[aria-pressed="true"] b{color:var(--accent)}
+.exp-intro .pfchip{opacity:0}
+.exp-intro.in .pfchip{opacity:1;animation:chipIn .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*45ms)}
+.pactions{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.pview{display:inline-flex;align-items:center;gap:.6rem;padding:.62rem 1.1rem;border:1px solid var(--accent);border-radius:2rem;background:transparent;color:var(--text);font:500 .9rem/1.2 var(--font);transition:background .2s,color .2s,border-color .2s,transform .25s cubic-bezier(.2,.7,.2,1)}
+.pview i{font-size:.8rem;color:var(--accent-text);transition:color .2s}
+.pview:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.pview:hover i{color:#fff}
+.pview[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.pview[aria-pressed="true"] i{color:var(--accent)}
+
+/* jump-to-project dropdown, compact on every screen */
+.pjump{display:block;position:relative;margin:0;width:auto;align-self:auto}
+.pjump .jbtn{display:inline-flex;width:auto;align-items:center;gap:.6rem;padding:.62rem 1.05rem;border:1px solid var(--line);border-radius:2rem;background:transparent;color:var(--mute);font:500 .9rem/1.2 var(--font);text-transform:none;letter-spacing:0}
+.pjump .jbtn:hover{border-color:var(--accent);color:var(--text)}
+.pjump .jarr{display:grid;place-items:center;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--surface);color:var(--accent-text);font-style:normal;font-size:.7rem;border:1px solid var(--line)}
+.pjump .jgrid{display:none;position:absolute;z-index:40;inset-inline-end:0;top:calc(100% + .5rem);width:min(36rem,84vw);grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;padding:.7rem;border:1px solid var(--line);border-radius:1rem;background:var(--surface);box-shadow:0 2rem 4rem -1.5rem rgba(0,0,0,.75);max-height:min(62vh,26rem);overflow:auto}
+.pjump.is-open .jgrid{display:grid}
+.pjump .jtile{display:flex;flex-direction:column;gap:.25rem;padding:.6rem .7rem;border:1px solid var(--line);border-radius:.7rem;background:var(--bg);color:var(--text);font:500 .8rem/1.25 var(--font);min-height:0;text-transform:none;letter-spacing:0}
+.pjump .jtile b{font:500 .6rem/1 var(--mono);color:var(--accent-text);letter-spacing:.1em}
+.pjump .jtile:hover{border-color:var(--accent)}
+.pjump .jtile.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+/* the slider itself */
+.pslider{position:relative;border-bottom:1px solid var(--line)}
+.pviewport{position:relative;overflow:hidden;transition:height .55s cubic-bezier(.22,.75,.2,1)}
+.ptrack{display:flex;align-items:flex-start;transition:transform .7s cubic-bezier(.22,.75,.2,1);will-change:transform}
+.ptrack.no-anim{transition:none}
+.project.pslide{flex:0 0 100%;min-width:0;border-bottom:0;padding-top:calc(var(--bar) + 1.5rem);justify-content:flex-start;min-height:calc(100svh - 9rem)}
+.project.pslide.is-off{display:none}
+.pslide .p-copy,.pslide .shot{transition:opacity .5s ease,transform .6s cubic-bezier(.22,.75,.2,1)}
+.pslider.is-ready .pslide:not(.is-active) .p-copy,.pslider.is-ready .pslide:not(.is-active) .shot{opacity:0;transform:translateY(1.4rem)}
+.pslider.is-ready .pslide.is-active .p-copy{transition-delay:.1s}
+.pslider.is-ready .pslide.is-active .shot{transition-delay:.16s}
+.parrow{position:absolute;z-index:8;top:calc(50% - 1.9rem);width:2.7rem;height:2.7rem;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--text);font-size:.92rem;transition:background .25s,border-color .25s,color .25s,transform .25s}
+.parrow:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:scale(1.06)}
+.parrow:active{transform:scale(.96)}
+.pprev{inset-inline-start:.35rem}
+.pnext{inset-inline-end:.35rem}
+:root[dir="rtl"] .parrow i{transform:scaleX(-1)}
+.pbar{display:flex;align-items:center;gap:1rem;padding:.85rem var(--pad);padding-inline-end:max(var(--pad),4.5rem);border-top:1px solid var(--line);background:var(--bg);position:relative;z-index:7}
+.pcount{display:flex;align-items:baseline;gap:.3rem;font:500 .7rem/1 var(--mono);letter-spacing:.14em;color:var(--mute);min-width:4.4rem;direction:ltr}
+.pcount b{font-size:.95rem;color:var(--text);letter-spacing:.06em}
+.pprogress{flex:1;height:2px;background:var(--line);position:relative;border-radius:2px;overflow:hidden}
+.pprogress span{position:absolute;inset-block:0;inset-inline-start:0;width:0;background:var(--accent);border-radius:2px;transition:width .55s cubic-bezier(.22,.75,.2,1)}
+.pcat{font:500 .66rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.ppause{width:2.2rem;height:2.2rem;flex:none;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:transparent;color:var(--mute);font-size:.68rem;transition:border-color .2s,color .2s}
+.ppause:hover{border-color:var(--accent);color:var(--text)}
+
+/* stacked fallback: the old one-under-another layout */
+.pslider.is-stacked{border-bottom:0}
+.pslider.is-stacked .pviewport{height:auto!important;overflow:visible}
+.pslider.is-stacked .ptrack{display:block;transform:none!important}
+.pslider.is-stacked .pslide{width:100%;border-bottom:1px solid var(--line);min-height:100svh}
+.pslider.is-stacked .pslide .p-copy,.pslider.is-stacked .pslide .shot{opacity:1!important;transform:none!important}
+.pslider.is-stacked .parrow,.pslider.is-stacked .pbar{display:none}
+
+@media (max-width:995px){
+  .pcontrols{gap:.8rem}
+  .pfilters{gap:.45rem}
+  .pfchip{padding:.55rem .9rem;font-size:.82rem;gap:.45rem}
+  .pfchip b{font-size:.62rem}
+  .pactions{width:100%;gap:.5rem}
+  .pview{flex:1 1 auto;justify-content:center;padding:.6rem .9rem;font-size:.82rem}
+  .pjump{flex:1 1 auto;width:auto}
+  .pjump .jbtn{width:100%;justify-content:center;font-size:.82rem;padding:.6rem .9rem}
+  .pjump .jgrid{width:min(100%,26rem);grid-template-columns:repeat(2,minmax(0,1fr))}
+  .parrow{top:auto;bottom:.75rem;width:2.5rem;height:2.5rem;font-size:.8rem;transform:none}
+  .parrow:hover,.parrow:active{transform:none}
+  .pprev{inset-inline-start:auto;inset-inline-end:3.4rem}
+  .pnext{inset-inline-end:.75rem}
+  .pbar{padding:.75rem var(--pad);padding-inline-end:6.4rem;gap:.7rem}
+  .pcat{display:none}
+  .pcount{min-width:3.6rem}
+  .project.pslide{padding-top:calc(var(--bar) + 1.2rem);min-height:calc(100svh - 9rem)}
+}

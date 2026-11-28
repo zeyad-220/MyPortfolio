@@ -31,13 +31,13 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) {
           var id = e.target.id; var inProj = /^p\d\d$/.test(id); var inExp = /^e\d\d$/.test(id) || id==='experience'; links.forEach(function (l) { var h = l.getAttribute('href'); l.classList.toggle('on', inExp ? l.dataset.group === 'exp' : inProj ? l.dataset.group === 'project' : h === '#' + id); });
-          jchips.forEach(function (c) { c.classList.toggle('on', c.getAttribute('href') === '#' + id); });
+          jchips.forEach(function (c) { if (c.closest('.pjump')) return; c.classList.toggle('on', c.getAttribute('href') === '#' + id); });
         }
       });
     }, { rootMargin: '-40% 0px -55% 0px' });
     var rv = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); } }); }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
     $$('.reveal').forEach(function (r) { rv.observe(r); });
-    $$('main > section[id]').forEach(function (s) { io.observe(s); });
+    $$('main > section[id], .pslide').forEach(function (s) { io.observe(s); });
   }
 
   if (!('IntersectionObserver' in window)) { $$('.reveal').forEach(function (r) { r.classList.add('in'); }); }
@@ -88,6 +88,174 @@
   $('.close', dlg).addEventListener('click', function () { dlg.close(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
 
+
+  // Projects slider: arrows, autoplay, category filters, stacked fallback
+  var pslider = $('#pslider');
+  if (pslider) {
+    var pv = $('.pviewport', pslider), pt = $('.ptrack', pslider);
+    var pslides = $$('.project', pt);
+    var pprev = $('.pprev', pslider), pnext = $('.pnext', pslider);
+    var pnow = $('.pcount b', pslider), ptot = $('.ptot', pslider);
+    var pfill = $('.pprogress span', pslider), pcat = $('.pcat', pslider);
+    var ppause = $('.ppause', pslider), pview = $('#pview');
+    var pfchips = $$('.pfchip');
+    var view = pslides.slice(), pi = 0, stacked = false;
+    var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var DELAY = 7000, ptimer = null, coolUntil = 0, paused = reduceMotion, hovering = false, onScreen = false, swiped = false;
+    var AR = function (en, ar) { return root.lang === 'ar' ? ar : en; };
+
+    function pRtl() { return root.dir === 'rtl'; }
+    function pPad(n) { return (n < 10 ? '0' : '') + n; }
+
+    function pLayout(anim) {
+      if (stacked || !view.length) return;
+      var w = pv.clientWidth;
+      if (!anim) { pt.classList.add('no-anim'); pv.style.transition = 'none'; }
+      pt.style.transform = 'translateX(' + (pRtl() ? pi * w : -pi * w) + 'px)';
+      pv.style.height = view[pi].offsetHeight + 'px';
+      if (!anim) { void pt.offsetWidth; pt.classList.remove('no-anim'); pv.style.transition = ''; }
+    }
+
+    function pPaint() {
+      if (!stacked && view.length) {
+        pslides.forEach(function (s) {
+          var on = s === view[pi];
+          s.classList.toggle('is-active', on);
+          if (on) { s.removeAttribute('aria-hidden'); s.removeAttribute('inert'); }
+          else { s.setAttribute('aria-hidden', 'true'); s.setAttribute('inert', ''); }
+        });
+        pnow.textContent = pPad(pi + 1);
+        ptot.textContent = '/ ' + pPad(view.length);
+        pfill.style.width = ((pi + 1) / view.length * 100) + '%';
+        var chip = pfchips.filter(function (c) { return c.getAttribute('aria-pressed') === 'true'; })[0];
+        if (chip) pcat.textContent = $('span', chip).textContent;
+        $$('.pjump .jtile').forEach(function (t) { t.classList.toggle('on', t.getAttribute('href') === '#' + view[pi].id); });
+      }
+      if (pview) {
+        $('span', pview).textContent = stacked ? AR('Back to slider', 'رجوع للسلايدر') : AR('Show all projects', 'اعرض كل المشاريع');
+        pview.setAttribute('aria-pressed', String(stacked));
+        $('i', pview).className = stacked ? 'fas fa-images' : 'fas fa-table-cells-large';
+      }
+    }
+
+    function pGo(i, user) {
+      if (stacked || !view.length) return;
+      pi = (i + view.length) % view.length;
+      pLayout(true); pPaint();
+      if (user) pCool();
+    }
+
+    function pPlay() {
+      clearTimeout(ptimer);
+      if (stacked || paused || hovering || !onScreen || view.length < 2) return;
+      var wait = Math.max(DELAY, coolUntil - Date.now());
+      ptimer = setTimeout(function () { pGo(pi + 1); pPlay(); }, wait);
+    }
+    function pRestart() { clearTimeout(ptimer); pPlay(); }
+    function pCool(ms) { coolUntil = Date.now() + (ms || 15000); pPlay(); }
+
+    function pFilter(f) {
+      pfchips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.f === f)); });
+      view = pslides.filter(function (s) {
+        return f === 'all' || (' ' + (s.dataset.cat || '') + ' ').indexOf(' ' + f + ' ') > -1;
+      });
+      pslides.forEach(function (s) { s.classList.toggle('is-off', view.indexOf(s) < 0); });
+      pi = 0;
+      pLayout(false); pPaint(); pCool(20000);
+    }
+
+    function pStacked(on) {
+      stacked = on;
+      pslider.classList.toggle('is-stacked', on);
+      pslides.forEach(function (s) { s.classList.remove('is-off'); s.classList.remove('is-active'); s.removeAttribute('aria-hidden'); s.removeAttribute('inert'); });
+      pfchips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.f === 'all')); });
+      view = pslides.slice(); pi = 0;
+      if (on) {
+        clearTimeout(ptimer);
+        pv.style.height = ''; pt.style.transform = '';
+      } else {
+        pLayout(false); pRestart();
+      }
+      pPaint();
+    }
+
+    if (pprev) pprev.addEventListener('click', function () { pGo(pi - 1, true); });
+    if (pnext) pnext.addEventListener('click', function () { pGo(pi + 1, true); });
+    pfchips.forEach(function (c) { c.addEventListener('click', function () { pFilter(c.dataset.f); }); });
+    if (pview) pview.addEventListener('click', function () { pStacked(!stacked); });
+
+    if (ppause) ppause.addEventListener('click', function () {
+      paused = !paused;
+      ppause.setAttribute('aria-pressed', String(paused));
+      ppause.setAttribute('aria-label', paused ? AR('Play slideshow', 'تشغيل العرض التلقائي') : AR('Pause slideshow', 'إيقاف العرض التلقائي'));
+      $('i', ppause).className = paused ? 'fas fa-play' : 'fas fa-pause';
+      if (paused) clearTimeout(ptimer); else pPlay();
+    });
+
+    pslider.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hovering = true; clearTimeout(ptimer); } });
+    pslider.addEventListener('pointerleave', function () { hovering = false; pPlay(); });
+    window.addEventListener('scroll', function () { if (onScreen) pCool(12000); }, { passive: true });
+    pslider.addEventListener('focusin', function () { hovering = true; clearTimeout(ptimer); });
+    pslider.addEventListener('focusout', function () { hovering = false; pPlay(); });
+    pslider.addEventListener('keydown', function (e) {
+      if (stacked) return;
+      if (e.key === 'ArrowRight') { pGo(pi + (pRtl() ? -1 : 1), true); e.preventDefault(); }
+      else if (e.key === 'ArrowLeft') { pGo(pi + (pRtl() ? 1 : -1), true); e.preventDefault(); }
+    });
+
+    var psx = 0, psy = 0, ptrk = false;
+    pv.addEventListener('pointerdown', function (e) { if (e.pointerType === 'mouse' && e.button !== 0) return; psx = e.clientX; psy = e.clientY; ptrk = true; });
+    pv.addEventListener('pointerup', function (e) {
+      if (!ptrk) return; ptrk = false;
+      var dx = e.clientX - psx, dy = e.clientY - psy;
+      if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy) * 1.3) return;
+      swiped = true; setTimeout(function () { swiped = false; }, 0);
+      pGo(pi + ((pRtl() ? dx > 0 : dx < 0) ? 1 : -1), true);
+    });
+    pv.addEventListener('click', function (e) { if (swiped) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+    function pJump(id) {
+      var el = document.getElementById(id);
+      if (!el || pslides.indexOf(el) < 0) return false;
+      var pin = $('#projects'); if (pin) pin.classList.add('in');
+      if (stacked) pStacked(false);
+      pFilter('all');
+      pi = view.indexOf(el);
+      pLayout(true); pPaint(); pRestart();
+      return true;
+    }
+    $$('a[href^="#p"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var id = a.getAttribute('href').slice(1);
+        if (!/^p\d\d$/.test(id) || !pJump(id)) return;
+        e.preventDefault();
+        pslider.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+
+    pslider.classList.add('is-ready');
+    pLayout(false); pPaint();
+    if (/^#p\d\d$/.test(location.hash)) {
+      pJump(location.hash.slice(1));
+      setTimeout(function () { pslider.scrollIntoView({ block: 'start' }); }, 80);
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { onScreen = e.isIntersecting; if (onScreen) pPlay(); else clearTimeout(ptimer); });
+      }, { threshold: 0.12 }).observe(pslider);
+    } else { onScreen = true; }
+    document.addEventListener('visibilitychange', function () { if (document.hidden) clearTimeout(ptimer); else pPlay(); });
+    window.addEventListener('resize', function () { pLayout(false); });
+    window.addEventListener('load', function () { pLayout(false); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { pLayout(false); });
+    var phire = $('#hire'), pbarEl = $('.pbar', pslider);
+    if (phire && pbarEl && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { es.forEach(function (e) { phire.classList.toggle('away', e.isIntersecting); }); }, { threshold: 0.35 }).observe(pbarEl);
+    }
+    window.__pRepaint = function () { pLayout(false); pPaint(); };
+    pPlay();
+  }
+
   // Language switch (English default, Arabic on request)
   var D = window.AR_DICT || {}, A = window.AR_ATTR || {};
   var langBtn = $('#lang');
@@ -128,6 +296,7 @@
     words = ar && window.AR_WORDS ? window.AR_WORDS : WORDS_EN;
     startTyping();
     if (save) { try { localStorage.setItem('lang', lang); } catch (e) {} }
+    if (window.__pRepaint) window.__pRepaint();
   }
   langBtn.addEventListener('click', function () { setLang(root.lang === 'ar' ? 'en' : 'ar', true); });
   if (root.lang === 'ar') setLang('ar', false);
