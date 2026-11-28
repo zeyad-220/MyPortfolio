@@ -101,7 +101,7 @@
     var pfchips = $$('.pfchip');
     var view = pslides.slice(), pi = 0, stacked = false;
     var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var DELAY = 7000, ptimer = null, coolUntil = 0, paused = reduceMotion, hovering = false, onScreen = false, swiped = false;
+    var DELAY = 3000, ptimer = null, coolUntil = 0, paused = reduceMotion, hovering = false, onScreen = false, swiped = false;
     var AR = function (en, ar) { return root.lang === 'ar' ? ar : en; };
 
     function pRtl() { return root.dir === 'rtl'; }
@@ -152,7 +152,7 @@
       ptimer = setTimeout(function () { pGo(pi + 1); pPlay(); }, wait);
     }
     function pRestart() { clearTimeout(ptimer); pPlay(); }
-    function pCool(ms) { coolUntil = Date.now() + (ms || 15000); pPlay(); }
+    function pCool(ms) { coolUntil = Date.now() + (ms || 6000); pPlay(); }
 
     function pFilter(f) {
       pfchips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.f === f)); });
@@ -161,7 +161,7 @@
       });
       pslides.forEach(function (s) { s.classList.toggle('is-off', view.indexOf(s) < 0); });
       pi = 0;
-      pLayout(false); pPaint(); pCool(20000);
+      pLayout(false); pPaint(); pCool(6000);
     }
 
     function pStacked(on) {
@@ -194,7 +194,6 @@
 
     pslider.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hovering = true; clearTimeout(ptimer); } });
     pslider.addEventListener('pointerleave', function () { hovering = false; pPlay(); });
-    window.addEventListener('scroll', function () { if (onScreen) pCool(12000); }, { passive: true });
     pslider.addEventListener('focusin', function () { hovering = true; clearTimeout(ptimer); });
     pslider.addEventListener('focusout', function () { hovering = false; pPlay(); });
     pslider.addEventListener('keydown', function (e) {

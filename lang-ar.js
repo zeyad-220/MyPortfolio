@@ -351,10 +351,12 @@ window.AR_DICT={
 "Prompt Engineering in 30 Minutes": "هندسة الأوامر في 30 دقيقة",
 "Google Cloud": "جوجل كلاود",
 "Cold calling / CRM": "كول كولينج / CRM",
+"Booking systems": "أنظمة الحجز",
 "Tools & daily life": "أدوات وحياة يومية",
 "Sports": "رياضة",
 "Games": "ألعاب",
 "Show all projects": "اعرض كل المشاريع",
+"Source code": "الكود المصدري",
 "Back to slider": "رجوع للسلايدر",
 "All": "الكل",
 "Other": "أخرى",
@@ -370,7 +372,7 @@ window.AR_DICT={
 "Back to top": "العودة للأعلى",
 "Hire me": "وظّفني"
 };
-window.AR_ATTR={"Previous project": "المشروع السابق", "Next project": "المشروع التالي", "Pause slideshow": "إيقاف العرض التلقائي", "Play slideshow": "تشغيل العرض التلقائي", "Filter projects by category": "تصفية المشاريع حسب الفئة", "Projects carousel": "عرض المشاريع", "Switch between dark and light theme": "التبديل بين الوضع الداكن والفاتح", "Open menu": "فتح القائمة", "Close preview": "إغلاق المعاينة", "Certificate preview": "معاينة الشهادة", "Zeyad Gaber, back to top": "زياد جابر، العودة للأعلى"};
+window.AR_ATTR={"Previous project": "المشروع السابق", "Next project": "المشروع التالي", "Pause slideshow": "إيقاف العرض التلقائي", "Play slideshow": "تشغيل العرض التلقائي", "Filter projects by category": "تصفية المشاريع حسب الفئة", "Projects carousel": "عرض المشاريع", "Open the source code on GitHub": "فتح الكود المصدري على GitHub", "Switch between dark and light theme": "التبديل بين الوضع الداكن والفاتح", "Open menu": "فتح القائمة", "Close preview": "إغلاق المعاينة", "Certificate preview": "معاينة الشهادة", "Zeyad Gaber, back to top": "زياد جابر، العودة للأعلى"};
 window.AR_WORDS=["فني ⁦IT⁩", "مطور ويب ⁦Front-End⁩", "⁦Cold Caller⁩ عقارات", "مسؤول توظيف", "طالب نظم معلومات", "ممثل صوتي"];
 window.AR_TITLE="زياد جابر – فني ⁦IT⁩ · مطوّر واجهات أمامية · ⁦Cold Caller⁩ عقارات";
 window.AR_DESC="الموقع الشخصي لزياد جابر: فني ⁦IT⁩ ومطوّر واجهات أمامية وCold Caller عقارات من مصر. 22 مشروعاً حياً وخبرة عملية في الدعم الفني و20 شهادة.";
