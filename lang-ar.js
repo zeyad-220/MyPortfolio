@@ -152,7 +152,17 @@ window.AR_DICT={
 "Remote": "عن بُعد",
 "April 2024 – October 2024": "أبريل 2024 – أكتوبر 2024",
 "[005] PROJECTS": "[005] المشاريع",
-"22 PROJECTS": "22 مشروعاً",
+"23 PROJECTS": "23 مشروعاً",
+"[23] PROJECT 23": "[23] المشروع 23",
+"A CRM and appointment scheduler for roofing leads. Keep every lead in one place and book inspections and estimates on a weekly schedule.": "نظام CRM وجدولة مواعيد لعملاء أعمال الأسقف المحتملين. اجمع كل عميل في مكان واحد واحجز المعاينات وعروض الأسعار على جدول أسبوعي.",
+"Links the lead list to a weekly schedule, so a slot can't be booked twice and every follow-up stays visible.": "يربط قائمة العملاء بجدول أسبوعي، فلا يُحجز الموعد مرتين وتظل كل متابعة ظاهرة.",
+"Dashboard with booked appointments, follow-ups due, jobs won, pipeline and roof condition": "لوحة تعرض المواعيد المحجوزة والمتابعات المستحقة والصفقات المكسوبة ومراحل المبيعات وحالة الأسقف",
+"Leads as cards or a table, with owner, mobile, address, roof age, condition and problems": "العملاء كبطاقات أو جدول، بالاسم والموبايل والعنوان وعمر السقف وحالته ومشاكله",
+"Weekly schedule grid with booked and free slots, and double-booking blocked": "جدول أسبوعي بالمواعيد المحجوزة والفارغة مع منع الحجز المزدوج",
+"Appointment types: Inspection, Estimate, Repair Quote and Follow-up Visit": "أنواع المواعيد: معاينة وتقدير وعرض سعر إصلاح وزيارة متابعة",
+"Follow-up dates with overdue days": "مواعيد المتابعة مع أيام التأخير",
+"Arabic and English with right-to-left layout, plus dark and light theme": "عربي وإنجليزي مع اتجاه من اليمين لليسار، ووضع داكن وفاتح",
+"RoofTrack (Roofing CRM)": "RoofTrack (CRM أعمال الأسقف)",
 "Jump to a project": "انتقل إلى مشروع",
 "[01] PROJECT 01": "[01] المشروع 01",
 "SELECTED WORK": "أعمال مختارة",
@@ -376,4 +386,4 @@ window.AR_DICT={
 window.AR_ATTR={"Previous project": "المشروع السابق", "Next project": "المشروع التالي", "Pause slideshow": "إيقاف العرض التلقائي", "Play slideshow": "تشغيل العرض التلقائي", "Filter projects by category": "تصفية المشاريع حسب الفئة", "Projects carousel": "عرض المشاريع", "Open the source code on GitHub": "فتح الكود المصدري على GitHub", "Switch between dark and light theme": "التبديل بين الوضع الداكن والفاتح", "Open menu": "فتح القائمة", "Close preview": "إغلاق المعاينة", "Certificate preview": "معاينة الشهادة", "Zeyad Gaber, back to top": "زياد جابر، العودة للأعلى", "Back to top": "العودة للأعلى", "Search the portfolio": "ابحث في الموقع"};
 window.AR_WORDS=["فني ⁦IT⁩", "مطور ويب ⁦Front-End⁩", "⁦Cold Caller⁩ عقارات", "مسؤول توظيف", "طالب نظم معلومات", "ممثل صوتي"];
 window.AR_TITLE="زياد جابر – فني ⁦IT⁩ · مطوّر واجهات أمامية · ⁦Cold Caller⁩ عقارات";
-window.AR_DESC="الموقع الشخصي لزياد جابر: فني ⁦IT⁩ ومطوّر واجهات أمامية وCold Caller عقارات من مصر. 22 مشروعاً حياً وخبرة عملية في الدعم الفني و20 شهادة.";
+window.AR_DESC="الموقع الشخصي لزياد جابر: فني ⁦IT⁩ ومطوّر واجهات أمامية وCold Caller عقارات من مصر. 23 مشروعاً حياً وخبرة عملية في الدعم الفني و20 شهادة.";
